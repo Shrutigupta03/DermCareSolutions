@@ -1,0 +1,36 @@
+div.container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    height: 60vh;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(235, 235, 255);
+    border-radius: 10px;
+    box-shadow: 185px 1px 73px white inset;
+}
+
+button{
+    border-radius: 6px;
+    background-color: rgb(22, 22, 92);
+    color: white;
+    padding: 0px 40px;
+    margin-top: 20px;
+    margin-right: 30px;
+    width: 180px;
+    height: 50px;
+    font-size: 19px;
+    align-self: flex-end;
+    border: 1px solid rgba(22, 22, 92, 0.94);
+}
+button:hover{
+    width: 190px;
+    background-color: rgba(22, 22, 92, 0.94);
+    cursor: pointer;
+    box-shadow: 0px 0px 4px rgba(22, 22, 92, 0.94);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 32px 50px;
+}
