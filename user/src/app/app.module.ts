@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ImageComponent } from './image/image.component';
 import { CrouselComponent } from './crousel/crousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UploadImgComponent } from './upload-img/upload-img.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     ImageComponent,
     CrouselComponent,
+    UploadImgComponent,
   ],
   imports: [
     BrowserModule,

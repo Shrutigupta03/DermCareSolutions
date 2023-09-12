@@ -1,29 +1,37 @@
-<ngb-carousel *ngIf="images">
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img [src]="images[0]" alt="Random first slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>First slide label</h3>
-			<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img [src]="images[1]" alt="Random second slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Second slide label</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</div>
-	</ng-template>
-	<ng-template ngbSlide>
-		<div class="picsum-img-wrapper">
-			<img [src]="images[2]" alt="Random third slide" />
-		</div>
-		<div class="carousel-caption">
-			<h3>Third slide label</h3>
-			<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-		</div>
-	</ng-template>
-</ngb-carousel>
+<div class="carousel">
+<div *ngIf="images && images.length >0" class="carousel-container">
+    <h3>Before you start - learn
+        How to make a suitable photo</h3>
+
+    <img *ngFor="let image of images; let i = index"
+        [src]="image.imageSrc" [alt]="image.imageAlt"
+        [ngClass]="{'image-active': selectedIndex === i}"
+        class="fade"
+    >
+
+    <div *ngIf="indicators" class="carousel-dot-container">
+        <span *ngFor="let dot of images; let i=index" 
+            class="dot"
+            [ngClass]="{'active': selectedIndex === i}"
+            (click)="selectImage(i)"
+        >
+        </span>
+    </div>
+
+    <button *ngIf="controls" class="btn-carousel btn-prev">
+        <i class="fa fa-arrow-circle-left icon-carousel icon-prev"
+            (click)="onPrevClick()"
+        ></i>
+    </button>
+
+    <button *ngIf="controls" class="btn-carousel btn-next">
+        <i class="fa fa-arrow-circle-right icon-carousel icon-next"
+            (click)="onNextClick()"
+        ></i>
+    </button>
+</div>
+
+<div class="btn">
+    <button *ngIf="lastSlider" class="got-it" (click)="UploadImage()">Got It! &#8594;</button>
+</div>
+</div>
