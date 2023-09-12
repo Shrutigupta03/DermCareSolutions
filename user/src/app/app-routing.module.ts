@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CrouselComponent } from './crousel/crousel.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
-  // { path:'', component:HomeComponent},
-  { path:'crousel', component:CrouselComponent}
+  { path:'home', component: HomeComponent},
+  { path:'crousel', component:CrouselComponent }
     
 ];
 
