@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --bg-color:#fff;
+    --text-color:#ffffff;
+    --main-color:#78b3ff;
+    --dark-color:#000;
+} 
