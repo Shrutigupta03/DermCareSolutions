@@ -6,17 +6,33 @@
             <div>
                 <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
             </div>
-            <p class="upload-image">
+            <!-- <p class="upload-image">
                 <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
                 <br>
                 Upload Image
                 <input type="file" (change)="selectFile($event)">
-            </p>
-            <div class="show-img">
+            </p> -->
+            <!-- <div class="show-img">
                 <img [src]="url" *ngIf="url">
                 <div *ngIf="url" class="centertext" style="color: green;">Successfully Uploaded!</div>
-            </div>
-            <button *ngIf="url" (click)="UploadedImg">Submit &#8594;</button>
+            </div> -->
+
+            <form action="http://192.168.84.214:5000" method="POST" enctype = "multipart/form-data">
+                <p class="upload-image">
+                    <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+                    <br>
+                    Upload Image
+                    <input type="file" (change)="selectFile($event)">
+                </p>
+                <div class="show-img">
+                    <img [src]="url" *ngIf="url">
+                    <div *ngIf="url" class="centertext" style="color: green;">Successfully Uploaded!</div>
+                </div>
+                <input class="btn" *ngIf="url" type="submit" />
+                
+            </form>
+
+            <!-- <button *ngIf="url" (click)="UploadedImg">Submit &#8594;</button> -->
         </div>
     </div>
 </div>

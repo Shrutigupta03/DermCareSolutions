@@ -34,7 +34,7 @@ export class UploadImgComponent {
 		}
 	}
 
-    UploadedImg(): void{
+    // UploadedImg() : void {
 
-    }
+    // }
 }

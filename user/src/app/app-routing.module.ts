@@ -6,6 +6,7 @@ import { UploadImgComponent } from './upload-img/upload-img.component';
 
 const routes: Routes = [
   { path:'', component:HomeComponent, pathMatch:'full'},
+  { path:'index.html', component:HomeComponent},
   { path:'check', component:CrouselComponent },
   { path:'image', component:UploadImgComponent }
     

@@ -128,8 +128,10 @@ h3{
 }
 .btn{
     width: 300px;
+    outline: none;
 }
 .btn:focus{
+    border: none;
     outline: none;
 }
 
@@ -154,5 +156,6 @@ button.got-it:hover{
 }
 
 button.got-it:focus{
+    border: none;
     outline: none;
 }

@@ -43,7 +43,7 @@ div.main-section{
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 18px;
+    font-size: 21px;
     font-weight: bold;
   }
   
@@ -95,7 +95,12 @@ div.main-section{
     border-radius: 10px;
   }
 
-  button{
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  input.btn{
     width: 150px;
     height: 45px;
     align-self: flex-end;
@@ -107,7 +112,7 @@ div.main-section{
     font-size: 20px;
     margin-top: 12px;
   }
-  button:hover{
+  input.btn:hover{
     width: 170px;
     transition: width 0.6s ease;
     background-color: #3573a7;;
