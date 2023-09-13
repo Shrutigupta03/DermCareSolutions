@@ -4,6 +4,8 @@
     justify-content: center;
     height: 100vh;
     width: 100vw;
+    /* background-image: url("assets/images/layered-waves.svg"); */
+    background-image: linear-gradient(white , rgb(225, 225, 253) 50%, rgb(204, 204, 254) 90%);
 }
 
 .carousel-container{
@@ -13,7 +15,8 @@
     height: 450px;
     border-radius: 15px;
     box-shadow: 0 6px 12px grey;
-    margin-left: 250px;
+    margin-left: 270px;
+    background-color: white;
 }
 
 h3{
@@ -147,7 +150,7 @@ button.got-it:hover{
     transition: width 0.6s ease;
     background-color: rgb(28, 28, 136);
     cursor: pointer;
-    box-shadow: 4px 4px 8px rgba(22, 22, 92, 0.94);
+    /* box-shadow: 4px 4px 8px rgba(22, 22, 92, 0.94); */
 }
 
 button.got-it:focus{
