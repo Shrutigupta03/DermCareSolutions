@@ -3,14 +3,14 @@ from flask import Flask, request, render_template
 import tensorflow as tf
 import numpy as np
 import cv2
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates")
 # UPLOAD_FOLDER = "/config/workspace/images" 
-UPLOAD_FOLDER = "/images" 
+UPLOAD_FOLDER = "images" 
 model = tf.keras.models.load_model("model/dermo_8th.h5")
 
 class_names = ["Acne", "Eczema", "Atopic", "Psoriasis", "Tinea", "Vitiligo"]
 
-def predict_skin_disease(image_path, model):
+def predict_skin_disease( image_path, model):
     try:
         
         img = cv2.imread(image_path)
@@ -36,8 +36,8 @@ def upload_predict():
             )
             image_file.save(image_location)
             pred = predict_skin_disease(image_location, model)
-            return render_template('user/src/app/upload-img/upload-img.component.html', prediction=pred)
-    return render_template('user/src/app/upload-img/upload-img.component.html', prediction=0)
+            return render_template('index.html', prediction=pred)
+    return render_template('index.html', prediction=0)
 
 if __name__ == "__main__":
     app.run(port=5000, host="0.0.0.0", debug=True)
