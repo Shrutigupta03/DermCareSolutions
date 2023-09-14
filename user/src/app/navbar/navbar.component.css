@@ -17,7 +17,7 @@ header{
 
 button{
     border-radius: 30px;
-    background-color: rgb(22, 22, 92);
+    background-color: rgb(13, 13, 59);
     color: white;
     padding: 0px 30px;
     margin-right: 10px;
@@ -26,12 +26,11 @@ button{
     height: 50px;
     font-size: 18px;
     align-self: flex-end;
-    border: 1px solid rgb(22, 22, 92);
 }
 button:hover{
     width: 190px;
     color: white;
-    background-color: rgba(24, 24, 97, 0.94);
+    background-color: rgba(22, 22, 92);
     transition: width 0.6s ease-in-out; ;
     cursor: pointer;
     /* box-shadow: 0px 0px 4px gray; */

@@ -142,7 +142,7 @@ button.got-it{
     border: none;
     border-radius: 36px;
     color: white;
-    background-color: rgb(22, 22, 92);
+    background-color: rgb(13, 13, 59);
     font-size: 25px;
     outline: none;
 }
@@ -150,9 +150,8 @@ button.got-it:hover{
     width: 270px;
     padding: 15px;
     transition: width 0.6s ease-in-out;
-    background-color: rgb(28, 28, 136);
+    background-color: rgb(22, 22, 92);
     cursor: pointer;
-    /* box-shadow: 4px 4px 8px rgba(22, 22, 92, 0.94); */
 }
 
 button.got-it:focus{

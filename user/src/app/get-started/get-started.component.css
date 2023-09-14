@@ -1,0 +1,39 @@
+.main-container{
+    padding: 40px 60px;
+}
+h3{
+    font-weight: bold;
+    color: rgb(13, 13, 59);
+}
+.items-container{
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item{
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+h6{
+    font-weight: bold;
+}
+.icon{
+    margin-bottom: 10px;
+}
+.icon img{
+    height: 40vh;
+}
+.description p{
+    color: rgb(13, 13, 59);
+    text-align: left;
+}
+p{
+    color: rgb(115, 115, 115);
+}

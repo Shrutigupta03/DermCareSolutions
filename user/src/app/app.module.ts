@@ -15,6 +15,7 @@ import { ResultComponent } from './result/result.component';
 import {BenefitsComponent} from './benefits/benefits.component';
 import {HeaderComponent} from './header/header.component';
 import {HeroComponent} from './hero/hero.component';
+import { GetStartedComponent } from './get-started/get-started.component';
 
 
 @NgModule({
@@ -31,6 +32,9 @@ import {HeroComponent} from './hero/hero.component';
     UploadImgComponent,
     ResultComponent,
     HeroComponent,
+    BenefitsComponent,
+    HeaderComponent,
+    GetStartedComponent
   ],
   imports: [
     BrowserModule,
