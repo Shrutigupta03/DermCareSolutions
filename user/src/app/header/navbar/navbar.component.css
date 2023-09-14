@@ -1,3 +1,4 @@
+
 header{
     position: static;
     width: 100%;
@@ -6,19 +7,39 @@ header{
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background: transparent;
     padding: 22px 14%;
     transition: all .50s ease;
     height: 100px;
 }
 
-
-
-
+button{
+    border-radius: 30px;
+    background-color: rgb(22, 22, 92);
+    color: white;
+    padding: 0px 30px;
+    margin-right: 10px;
+    /* margin-right: 30px; */
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    align-self: flex-end;
+    border: 1px solid rgb(22, 22, 92);
+}
+button:hover{
+    width: 190px;
+    color: white;
+    background-color: rgba(24, 24, 97, 0.94);
+    transition: width 0.6s ease-in-out; ;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 4px gray; */
+}
 .logo{
     display: flex;
     align-items: center;
+    margin: auto;
+    margin-left: 0;
 }
 .logo i{
     color: var(--main-color);
@@ -35,6 +56,8 @@ li{
 }
 .navbar{
     display: flex;
+    margin: auto;
+    margin-left: 0;
 }
 .navbar a{
     color: var(--dark-color);
@@ -56,6 +79,7 @@ li{
 .main{
     display: flex;
     align-items: center;
+    width: 200px;
 }
 /* On user side */
 .main a{
@@ -92,6 +116,10 @@ li{
     display: none;
     z-index: 1001;
 }
+.bx{
+    display: none;
+}
+
 /* Media Querry */
 @media (max-width:1280px) {
 
@@ -110,6 +138,9 @@ li{
 }
 @media (max-width:960px) {
 
+    .bx{
+        display: block;
+    }
 
   .navbar{
     position: absolute;

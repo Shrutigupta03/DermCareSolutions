@@ -12,10 +12,6 @@ import { CrouselComponent } from './crousel/crousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UploadImgComponent } from './upload-img/upload-img.component';
 import { ResultComponent } from './result/result.component';
-import { HeaderComponent } from './header/header.component';
-import { GetStartedComponent } from './get-started/get-started.component';
-import { HeroComponent } from './header/hero/hero.component';
-import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +24,6 @@ import { ErrorComponent } from './error/error.component';
     CrouselComponent,
     UploadImgComponent,
     ResultComponent,
-    HeaderComponent,
-    GetStartedComponent,
-    HeroComponent,
-    ErrorComponent,
   ],
   imports: [
     BrowserModule,
