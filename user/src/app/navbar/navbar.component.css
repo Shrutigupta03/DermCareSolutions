@@ -1,6 +1,6 @@
 
 header{
-    position: static;
+    position: sticky;
     width: 100%;
     top: 0;
     right: 0;
@@ -8,7 +8,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background: transparent;
+    /* background: transparent; */
+    background-color: white;
     padding: 22px 14%;
     transition: all .50s ease;
     height: 100px;
@@ -54,6 +55,7 @@ button:hover{
 li{
     list-style-type: none;
 }
+
 .navbar{
     display: flex;
     margin: auto;
@@ -61,10 +63,10 @@ li{
 }
 .navbar a{
     color: var(--dark-color);
-    font-size: 1.1rem;
+    font-size: 1.425rem;
     font-weight: 500;
     padding: 2px 0px;
-    margin: 0 30px;
+    margin: 0 10px;
     transition: all .50s ease;
     text-decoration:none
 }
@@ -86,7 +88,7 @@ li{
     margin-right: 21px;
     margin-left: 11px;
     color: var(--dark-color);
-    font-size: 1.2rem;
+  
     font-weight: 500;
     transition: all .50s ease;
     text-decoration:none
@@ -107,6 +109,7 @@ li{
 }
 .main a:hover {
     color: var(--main-color);
+    font-family: cursive;
     
 }
 #menu-icon{
