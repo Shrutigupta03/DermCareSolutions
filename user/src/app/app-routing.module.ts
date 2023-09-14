@@ -6,7 +6,7 @@ import { UploadImgComponent } from './upload-img/upload-img.component';
 import { ResultComponent } from './result/result.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { GetStartedComponent } from './get-started/get-started.component';
-import { HeroComponent } from './header/hero/hero.component';
+import { HeroComponent } from './hero/hero.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
