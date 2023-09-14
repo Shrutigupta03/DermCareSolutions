@@ -26,7 +26,20 @@ h3{
     background-color: rgb(239, 239, 255);
     height: 350px;
     max-height: fit-content;
+    animation: pulse 10s infinite;
+
 }
+
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
 .info-box:hover{
     box-shadow: 8px 8px 6px rgb(220, 220, 220);
     margin-top: -8px;

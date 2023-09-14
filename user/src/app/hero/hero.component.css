@@ -1,0 +1,157 @@
+.hero{
+    height: 100vh;
+      margin: 10px auto;
+    /* height: 60vh; */
+   
+    border-radius: 10px;
+    box-shadow: 220px 0px 73px white inset;
+    background-image: linear-gradient(white , rgb(225, 225, 253) 50%, rgb(204, 204, 254) 90%);
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    /* background: url(../../../assets/images/Home1Hero-main.jpeg) no-repeat center center/cover; */
+    height: 100vh;
+    padding-top: 20vh;
+    z-index: -1;
+}
+
+.hero-container{
+    display: flex;
+    align-items: center;
+    padding: auto;
+
+    
+}
+.left-text{
+    position: relative;
+    padding-left: 70px;
+    top: 40px;
+    margin: 20px 40px;
+    
+}
+h3{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0 20px;
+}
+p{
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 10px 20px;
+    
+    
+}
+button{
+   
+    border-radius: 30px;
+    background-color: rgb(22, 22, 92);
+    color: white;
+    padding: 0px 20px;
+    margin-left: 20px;
+    /* margin-right: 10px; */
+    /* margin-right: 30px; */
+    width: 150px;
+    height: 50px;
+    font-size: 1rem;
+    align-self: flex-end;
+    border: 1px solid var(--main-color);
+}
+
+  
+
+div a.text{
+  animation: bounce 4s infinite;
+}
+
+
+
+  @keyframes pulseOut {
+    0%{
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.09);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+  }
+  
+ 
+  
+  
+  
+  a.text {
+    animation: bounce 10s 4;
+    animation-delay: 10s;
+  }
+  
+button::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* transform: scaleX(0); */
+    transform-origin: left top; 
+}
+button:hover{
+    /* width: 190px; */
+    color: white;
+    background-color: rgba(24, 24, 97, 0.94);
+    transition: width 2.4s ease-in; ;
+    cursor: pointer;
+    /* scale: 1.1; */
+    animation: pulseOut 3s infinite;
+    /* box-shadow: 0px 0px 4px gray; */
+}
+
+.right-content{
+    position: absolute;
+    top: 70px;
+    right: 70px;
+
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.img-hero{
+    width: 500px;
+    mix-blend-mode:multiply;
+}
+
+.img-hero img{
+    background-blend-mode: multiply; 
+    animation: fadeOut 10s   infinite top;
+
+}
+
+
+/* media querry */
+@media (max-width:960px) {
+.hero{
+    text-align: center;
+    height: 100vh;
+      margin: 0 auto;
+    /* height: 60vh; */
+   
+    border-radius: 10px;
+    box-shadow: 220px 0px 73px white inset;
+    background-image: linear-gradient(white , rgb(225, 225, 253) 50%, rgb(204, 204, 254) 90%);
+}
+.img-hero{
+
+    width: 400px;
+    opacity: 0.078;
+    /* mix-blend-mode:multiply; */
+
+}
+.img-hero img{
+   
+    background-blend-mode: multiply; 
+}
+
+}

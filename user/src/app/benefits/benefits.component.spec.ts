@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BenefitsComponent } from './benefits.component';
+import { applyStyles } from '@popperjs/core';
 
 describe('BenefitsComponent', () => {
   let component: BenefitsComponent;
@@ -11,6 +12,9 @@ describe('BenefitsComponent', () => {
       declarations: [ BenefitsComponent ]
     })
     .compileComponents();
+    // h
+    // app
+    // app hero
 
     fixture = TestBed.createComponent(BenefitsComponent);
     component = fixture.componentInstance;
