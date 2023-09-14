@@ -72,6 +72,9 @@ li{
     display: flex;
     align-items: center;
 }
+.hide{
+    display: none;
+}
 .user i{
     color: var(--dark-color);
     font-size: 26px;
