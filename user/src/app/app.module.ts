@@ -12,6 +12,7 @@ import { CrouselComponent } from './crousel/crousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UploadImgComponent } from './upload-img/upload-img.component';
 import { ResultComponent } from './result/result.component';
+import { BenefitsComponent } from './benefits/benefits.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ResultComponent } from './result/result.component';
     CrouselComponent,
     UploadImgComponent,
     ResultComponent,
+    BenefitsComponent,
   ],
   imports: [
     BrowserModule,
