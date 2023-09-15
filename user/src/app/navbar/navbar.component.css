@@ -66,11 +66,13 @@ li{
     font-weight: 500;
     padding: 2px 0px;
     margin: 0 10px;
-    transition: all .50s ease;
+    transition: all 1s ease;
     text-decoration:none
 }
 .navbar a:hover{
     color: var(--main-color);
+    font-weight: 600;
+
 
 }
 .navbar a:active{
@@ -108,7 +110,6 @@ li{
 }
 .main a:hover {
     color: var(--main-color);
-    font-family: cursive;
     
 }
 #menu-icon{

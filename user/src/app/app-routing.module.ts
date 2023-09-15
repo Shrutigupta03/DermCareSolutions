@@ -8,6 +8,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { HeroComponent } from './hero/hero.component';
 import { ErrorComponent } from './error/error.component';
+import { BenefitsComponent } from './benefits/benefits.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'/home', pathMatch:'full'},
@@ -19,12 +20,15 @@ const routes: Routes = [
   { path:'check', component:CrouselComponent },
   { path:'image', component:UploadImgComponent },
   { path:'result', component:ResultComponent},
+  {path:'benefits', component:BenefitsComponent},
   {path:"**", component:ErrorComponent}
     
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',scrollOffset: [0, 64]})
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

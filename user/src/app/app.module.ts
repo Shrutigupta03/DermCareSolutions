@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -39,6 +39,7 @@ import { GetStartedComponent } from './get-started/get-started.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterLink,
     NgbModule
   ],
   providers: [],
