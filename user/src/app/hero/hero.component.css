@@ -1,9 +1,10 @@
 .hero{
-    height: 80vh;
+    height: 82vh;
     margin: 10px auto;
     padding: 60px 0;
     box-shadow: 220px 0px 103px white inset;
-    background-image: linear-gradient(to top, white , rgb(232, 232, 255) 90%,  rgb(229, 229, 255) 100%);}
+    background-image: linear-gradient(to bottom, white , rgb(217, 217, 249) 90%,  rgb(200, 200, 251) 100%);
+}
 
 .hero::before{
     content: "";
@@ -18,7 +19,6 @@
     display: flex;
     align-items: center;
     padding: auto;
-
     
 }
 .left-text{
@@ -106,9 +106,12 @@ button:hover{
 .right-content{
     position: absolute;
     top: 70px;
-    right: 70px;
-
+    right: 30px;
+    /* padding-top: 30px; */
 }
+/* .right-content img{
+    height: 100%;
+} */
 a{
     color: #fff;
     text-decoration: none;
@@ -123,7 +126,6 @@ a{
 .img-hero img{
     background-blend-mode: multiply; 
     animation: fadeOut 10s   infinite top;
-
 }
 
 
@@ -137,7 +139,7 @@ a{
    
     border-radius: 10px;
     box-shadow: 220px 0px 73px white inset;
-    background-image: linear-gradient(white , rgb(225, 225, 253) 50%, rgb(204, 204, 254) 90%);
+    background-image: linear-gradient(white , rgb(240, 240, 254) 50%, rgb(234, 234, 254) 90%);
 }
 .img-hero{
 
