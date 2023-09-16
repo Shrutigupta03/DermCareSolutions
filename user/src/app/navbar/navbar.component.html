@@ -4,10 +4,10 @@
         <h2 style="font-weight: bold;">DermCare.AI</h2>
     </div>
     <ul class="navbar">
-        <li [routerLinkActive]="'active'"><a [routerLink]=""  class="nav-items">Home</a></li>
-        <li [routerLinkActive]="'active'"><a [routerLink]="'about-us'" class="nav-items">About</a></li> 
-        <li [routerLinkActive]="'active'"><a [routerLink]="['benefits']" class="nav-items">Services</a></li> 
-        <li [routerLinkActive]="'active'"><a href="get-started" class="nav-items">Contact-us</a></li>
+        <li (click)="tohome()" [routerLinkActive]="'active'" ><a [routerLink]="" class="nav-items">Home</a></li>
+        <li (click)="toabout()" [routerLinkActive]="'active'" ><a class="nav-items">About</a></li> 
+        <li (click)="toBenefits()" [routerLinkActive]="'active'" ><a class="nav-items">Services</a></li> 
+        <li (click)="toWhy()" [routerLinkActive]="'active'" ><a  class="nav-items">Why to chose ?</a></li>
     </ul>
     <div class="main">
         <a href="#" class="user hide"><i class="ri-user-fill hide"></i>Sign In</a>

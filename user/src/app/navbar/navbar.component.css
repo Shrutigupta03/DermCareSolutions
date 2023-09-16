@@ -71,10 +71,15 @@ li{
     text-decoration:none
 }
 .navbar a:hover{
+    cursor: pointer;
     color: var(--main-color);
     font-weight: 600;
 
 
+}
+.bx{
+    display: none;
+    /* visibility: hidden; */
 }
 .navbar a:active{
     color: var(--main-color);
@@ -96,6 +101,7 @@ li{
     text-decoration:none
 
 }
+
 .user{
     display: flex;
     align-items: center;
@@ -120,9 +126,7 @@ li{
     display: none;
     z-index: 1001;
 }
-.bx{
-    display: none;
-}
+
 
 /* Media Querry */
 @media (max-width:1280px) {
@@ -150,9 +154,9 @@ li{
     position: absolute;
     top: 100%;
     right: 2%;
-    width: 240px;
-    height:29vh;
-    background: var(--main-color);
+    width: 200px;
+    height:39vh;
+    background: #0000001a;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -160,13 +164,15 @@ li{
     transition: all  .50s ease;
   }
   .navbar a{
-    display: block;
+    display: flexbox;
+    color: #000;
+    flex-wrap: wrap;
     margin: 12px 0;
     padding-top: 0 25px;
     transition: all .50s ease;
   }
   .navbar a:hover{
-    color:#fff;
+    color:#000000;
     transform: translateY(1px);
   }
   .navbar a:active{
@@ -177,3 +183,17 @@ li{
   }
 
 }
+/* active notworking on styles.css ??? */
+.active{
+    font-family: cursive;
+}
+.active a::after{
+    content:""; 
+    float:left;
+    width:100%; 
+    height:2.5px; 
+    border-radius: 10px;
+    background: var(--main-color);
+    color: #ffffff; 
+     
+  }

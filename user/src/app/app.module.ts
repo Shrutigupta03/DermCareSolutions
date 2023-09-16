@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import {BenefitsComponent} from './benefits/benefits.component';
 import {HeaderComponent} from './header/header.component';
 import {HeroComponent} from './hero/hero.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
     HeroComponent,
     BenefitsComponent,
     HeaderComponent,
-    GetStartedComponent
+    GetStartedComponent,
+    WhyToChoseComponent
   ],
   imports: [
     BrowserModule,
