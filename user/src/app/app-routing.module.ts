@@ -11,7 +11,9 @@ import { ErrorComponent } from './error/error.component';
 import { BenefitsComponent } from './benefits/benefits.component';
 
 const routes: Routes = [
-  { path:'', redirectTo:'/home', pathMatch:'full'},
+  // { path:'', redirectTo:'home',pathMatch:'full'},
+  
+  {path:'', component:HomeComponent},
   {path:'hero',component:HeroComponent},
   { path:'home', component:HomeComponent},
   {path:'about-us', component:AboutUsComponent},

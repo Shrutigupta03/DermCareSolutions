@@ -70,6 +70,8 @@
 .footer-col ul li:not(:last-child){
     margin-bottom: 8px;
   }
+
+ 
 /* Media  queries */
 
 @media (max-width: 1000px) {
