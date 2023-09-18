@@ -25,11 +25,10 @@
     flex-direction: column;
     align-items: left;
     padding-left: 70px;
-    margin: 15px 40px;
+    margin: 15px 20px;
     /* animation: slide-right 0.8s ease-out; */
     /* animation: fade-in 1s ease-in; */
     align-items: left;
-    margin: 15px 20px 15px 50px;
     /* overflow: hidden; */
 }
 h1{
