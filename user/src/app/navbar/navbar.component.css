@@ -40,7 +40,7 @@ button:hover{
     display: flex;
     align-items: center;
     margin: auto;
-    margin-left: 0;
+    margin-left: 40px;
 }
 .logo i{
     color: var(--main-color);

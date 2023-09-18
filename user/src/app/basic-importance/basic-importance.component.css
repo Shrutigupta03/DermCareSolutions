@@ -1,22 +1,20 @@
 .risk-container{
     display: block;
-    margin: 40px 60px;
-    padding: 16px;
-    background-color: rgba(255, 248, 248, 0.362);
+    padding: 50px;
+    /* padding: 16px; */
+    background-color: rgb(255, 255, 255);
     z-index: -200;
-}
-h3,p{
-    margin-left: 45px;
+    height: fit-content;
+    width: 98vw;
 }
 
 h3{
    
-    font-size: 2.345rem;
-    font-weight: 700;
-    margin-top: 20px;
+    /* font-size: 2.345rem; */
+    font-weight: bold;
 }
 p{
- font-size: 1rem;
+ font-size: 13px;
 }
 .benefits-of-using{
 
@@ -24,20 +22,16 @@ padding: 2px 10px;
 display: flex;
 }
 .box{
-    position: relative;
+    /* position: relative; */
     top: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 15px;
     flex: 1;
-    height: 400px;
-
-   
+    height: fit-content;
     
 }
 .list{
-    padding: 1px 10px;
-    width: 680px;
-    height:300px;
+    padding: 10px 10px;
+    height: fit-content;
     display: flex;
     border: 1px solid #bbbbbb67;
     box-shadow: var(--main-color) 1px 1px 2px;
@@ -48,27 +42,16 @@ display: flex;
     /* background-color: aliceblue; */
 }
 .item{
-    padding: 20px 5px;
+    padding: 12px 5px;
 }
 .icon{
     padding: 4px;
 }
 .icon svg{
    height: 20px;
-   fill: var(--main-color);
+   fill: #09d609;
 }
-.right{
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    /* border-radius: 10px; */
-    box-shadow: 4px 4px 6px rgb(220, 220, 220);
-    margin: 0 auto;
-    /* background-color: rgb(239, 239, 255); */
-    padding: 20px 100px;
-}
+
 .desc{
-    font-size: 18px;
+    font-size: 14px;
 }

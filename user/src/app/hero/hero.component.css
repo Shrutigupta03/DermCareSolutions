@@ -1,5 +1,5 @@
 .hero{
-    height: 81vh;
+    height: fit-content;
     margin: 10px auto;
     box-shadow: -103px 0px 100px white inset;
     background-image: linear-gradient(to bottom, white , rgb(229, 229, 255) 80%,  rgb(209, 209, 252) 100%);
@@ -26,16 +26,19 @@
     align-items: left;
     padding-left: 70px;
     margin: 15px 40px;
-    animation: slide-right 0.8s ease-out;
-    /* animation: 1s fade-out; */
-
+    /* animation: slide-right 0.8s ease-out; */
+    /* animation: fade-in 1s ease-in; */
+    align-items: left;
+    margin: 15px 20px 15px 50px;
     /* overflow: hidden; */
 }
-h3{
-    font-size: 2rem;
+h1{
+    /* font-size: 2rem; */
     font-weight: bold;
     padding: 0 20px;
+    animation: fade-in 0.5s ease-in;
     overflow: hidden;
+    color: rgb(13, 13, 59);
 }
 
 @keyframes slide-right {
@@ -49,10 +52,11 @@ h3{
 }
 
 p{
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 300;
     padding: 10px 20px;
     overflow: hidden;
+    animation: fade-in 0.5s ease-in;
 }
 button{
     border-radius: 30px;
@@ -62,9 +66,10 @@ button{
     margin-left: 20px;
     width: 150px;
     height: 50px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     align-self: flex-start;
     border: 1px solid var(--main-color);
+    animation: fade-in 0.5s ease-in;
 }
 
   
@@ -112,7 +117,7 @@ a{
 
 .img-hero img{
     background-blend-mode: multiply; 
-    animation: fade-in 3s;
+    animation: fade-in 1s;
 }
 @keyframes fade-in {
     from{
