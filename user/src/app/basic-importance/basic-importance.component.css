@@ -1,6 +1,6 @@
 .risk-container{
     display: block;
-    padding: 50px;
+    padding: 30px 50px 20px 50px;
     /* padding: 16px; */
     background-color: rgb(255, 255, 255);
     z-index: -200;
@@ -10,15 +10,17 @@
 
 h3{
     font-weight: bold;
+    text-align: center;
 }
 p{
- font-size: 13px;
+    text-align: center;
+    font-size: 13px;
 }
 .benefits-of-using{
 
-padding: 2px 10px;
-display: flex;
-width: 50vw;
+    padding: 15px 0 0 0;
+    display: flex;
+    width: 50vw;
 }
 .box{
     /* position: relative; */
@@ -50,10 +52,10 @@ width: 50vw;
     display: flex;
     flex-direction: row;
     padding: 10px;
-    justify-content: flex-start;
+    margin: 2px 0;
     align-items: center;
-    border: 2px solid rgb(241, 241, 254);
-    background-color: rgb(241, 241, 254);
+    border: 2px solid rgb(236, 236, 255);
+    background-color: rgb(236, 236, 254);
     color: black;
     border-radius: 50px;
     width: 26vw;
@@ -82,8 +84,8 @@ p{
     align-self: flex-end;
     margin-right: 21vw;
 }
+
 .item:hover{
-    border: 2px solid rgb(13, 13, 59);
     background-color: white;
-    box-shadow: 2px 2px 4px rgb(13, 13, 59);
+    box-shadow: 0px 0px 5px rgb(13, 13, 59);
 }
