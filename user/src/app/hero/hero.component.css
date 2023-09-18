@@ -26,13 +26,15 @@
     align-items: left;
     padding-left: 70px;
     margin: 15px 40px;
+    animation: slide-right 0.8s ease-out;
+    /* animation: 1s fade-out; */
+
     /* overflow: hidden; */
 }
 h3{
     font-size: 2rem;
     font-weight: bold;
     padding: 0 20px;
-    animation: slide-right 2.5s ease-in;
     overflow: hidden;
 }
 
@@ -51,7 +53,6 @@ p{
     font-weight: 300;
     padding: 10px 20px;
     overflow: hidden;
-    animation: slide-right 2.75s ease-in;
 }
 button{
     border-radius: 30px;
@@ -64,7 +65,6 @@ button{
     font-size: 1rem;
     align-self: flex-start;
     border: 1px solid var(--main-color);
-    animation: slide-right 3s ease-in;
 }
 
   
@@ -123,7 +123,15 @@ a{
     }
     
 }
-
+@keyframes fade-out {
+  from{
+      opacity: 1;
+  }
+  to{
+      opacity: 0.8;
+  }
+  
+}
 
 /* media querry */
 @media (max-width:960px) {
