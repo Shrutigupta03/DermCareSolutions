@@ -18,6 +18,7 @@ import {HeaderComponent} from './header/header.component';
 import {HeroComponent} from './hero/hero.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
+import { BasicImportanceComponent } from './basic-importance/basic-importance.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
     BenefitsComponent,
     HeaderComponent,
     GetStartedComponent,
-    WhyToChoseComponent
+    WhyToChoseComponent,
+    BasicImportanceComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,85 @@
+.why-slider-container{
+    height: 120px;
+   overflow: hidden;
+}
+h3{
+    margin:auto;
+    padding-left: 76px;
+}
+.slider{
+   
+    height: 120px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.slide-track{
+    display: flex;
+    width: calc(360px * 7);
+    overflow: hidden;
+    transition: 10s ease-in-out;
+    animation: scroll linear infinite;
+    animation-duration: 20s;
+    /* animation-delay: 10s; */
+    /* animation-delay: 2s; */
+}
+@keyframes scroll {
+    0%, 10% {
+        transform: translateX(0);
+    }
+    15%, 30% {
+        transform: translateX(-14%);
+    }
+    35%, 40% {
+        transform: translateX(-28%);
+    }
+    45%, 60% {
+        transform: translateX(-41%);
+    }
+    65%,75%{
+        transform: translateX(-56%);
+
+    }
+    80%, 85% {
+        transform: translateX(-70%);
+    }
+    90%{
+        transform: translateX(-84%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.slide{
+    box-sizing: border-box;
+    border: 2px solid white;
+
+    border-radius: 13px;
+   background:linear-gradient(to bottom, white , rgb(217, 217, 249) 90%,  rgb(200, 200, 251) 100%);
+    display: flex;
+    align-items: center;
+    height: 140px;
+    transition: 1s linear ease-in;
+    /* margin: 0 auto; */
+    /* padding: 10px; */
+    perspective: 100px;
+    margin:10px 20px;
+    padding: 4px;
+}
+.slider::before, .slider::after{
+    background:linear-gradient(to right, white , rgb(255, 217, 249,1) 0%,  rgb(200, 200, 251,0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+
+
+}
+.para-container:hover{
+    transform: translateZ(2px);
+}
