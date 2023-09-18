@@ -4,10 +4,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    
 }
 :root{
     --bg-color:#fff;
-    --text-color:#ffffff;
-    --main-color:#78b3ff;
+    --text-color:#3b3434;
+    --main-color:rgb(22, 22, 92);
     --dark-color:#000;
 } 
+/* .active{
+    background-color: rgb(57, 50, 50);
+} */

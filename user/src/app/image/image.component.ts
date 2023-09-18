@@ -10,7 +10,7 @@ export class ImageComponent {
   constructor(private router: Router) {}
 
     newCrousel(): void {
-        this.router.navigateByUrl('crousel');
+        this.router.navigate(['check']);
     }
 }
 

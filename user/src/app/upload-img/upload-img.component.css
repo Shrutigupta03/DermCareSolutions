@@ -1,0 +1,122 @@
+div.img-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(white , rgb(225, 225, 253) 50%, rgb(204, 204, 254) 90%);
+
+}
+
+div.main-section{
+    width: 450px;
+    height: fit-content;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px grey;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+/* Style the container */
+.img {
+    padding: 25px; /* Add some spacing around the component */
+    border-radius: 5px; /* Add rounded corners */
+    text-align: center; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Style the error message */
+  .img div {
+    color: red;
+    margin-bottom: 10px; /* Add spacing below the error message */
+  }
+
+  .show-img {
+    position: relative;
+  }
+  
+  .centertext {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+    font-weight: bold;
+  }
+  
+  .upload-image {
+    background-color: rgba(22, 22, 92);
+    /* background-color: #61aeed;  */
+    color: white; /* Set text color to white */
+    padding: 15px; /* Add some padding */
+    border-radius: 10px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to a pointer when hovering */
+    overflow: hidden; /* Hide overflowing content */
+    text-align: center; /* Center the content horizontally */
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 400px;
+    margin: 0px;
+    font-size: 20px;
+    position: relative; /* Position relative to allow absolute positioning of the button */
+  }
+  
+  /* Style the "Choose File" button */
+  .upload-image input[type="file"] {
+    position: absolute; /* Position the input element absolutely */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Make the input element invisible */
+    width: 100%; /* Ensure the entire button area is clickable */
+    height: 100%; /* Ensure the entire button area is clickable */
+    cursor: pointer; /* Change cursor to a pointer when hovering */
+  }
+  
+  /* Style the "Choose File" button text (optional) */
+  .upload-image span {
+    display: block;
+  }
+  
+  /* Style the "Choose File" button on hover (optional) */
+  .upload-image:hover {
+    background-color: rgb(28, 28, 136);
+    /* background-color: #4697da; */
+  }
+  
+  /* Style the displayed image */
+  .img img {
+    max-width: 60%; /* Ensure the image doesn't exceed the container width */
+    margin-top: 20px; /* Add spacing below the image */
+    opacity: 0.4;
+    border-radius: 10px;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+  }
+
+  input.btn{
+    width: 150px;
+    height: 45px;
+    align-self: flex-end;
+    margin-top: 10px;
+    border-radius: 30px;
+    color: white;
+    background-color: #4f9ede;;
+    border: none;
+    font-size: 20px;
+    margin-top: 12px;
+  }
+  input.btn:hover{
+    width: 170px;
+    transition: width 0.6s ease;
+    background-color: #3573a7;;
+    cursor: pointer;
+    
+  }
+  

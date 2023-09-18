@@ -1,23 +1,46 @@
+
 header{
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: transparent;
+    justify-content: space-evenly;
+    /* background: transparent; */
+    background-color: white;
     padding: 22px 14%;
     transition: all .50s ease;
+    height: 100px;
+
 }
 
-
-
-
+button{
+    border-radius: 30px;
+    background-color: rgb(13, 13, 59);
+    color: white;
+    padding: 0px 30px;
+    margin-right: 10px;
+    /* margin-right: 30px; */
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    align-self: flex-end;
+}
+button:hover{
+    width: 190px;
+    color: white;
+    background-color: rgba(22, 22, 92);
+    transition: width 0.6s ease-in-out; ;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 4px gray; */
+}
 .logo{
     display: flex;
     align-items: center;
+    margin: auto;
+    margin-left: 0;
 }
 .logo i{
     color: var(--main-color);
@@ -32,21 +55,31 @@ header{
 li{
     list-style-type: none;
 }
+
 .navbar{
     display: flex;
+    margin: auto;
+    margin-left: 0;
 }
 .navbar a{
     color: var(--dark-color);
-    font-size: 1.1rem;
+    font-size: 1.425rem;
     font-weight: 500;
     padding: 2px 0px;
-    margin: 0 30px;
-    transition: all .50s ease;
+    margin: 0 10px;
+    transition: all 1s ease;
     text-decoration:none
 }
 .navbar a:hover{
+    cursor: pointer;
     color: var(--main-color);
+    font-weight: 600;
 
+
+}
+.bx{
+    display: none;
+    /* visibility: hidden; */
 }
 .navbar a:active{
     color: var(--main-color);
@@ -55,21 +88,26 @@ li{
 .main{
     display: flex;
     align-items: center;
+    width: 200px;
 }
 /* On user side */
 .main a{
     margin-right: 21px;
     margin-left: 11px;
     color: var(--dark-color);
-    font-size: 1.2rem;
+  
     font-weight: 500;
     transition: all .50s ease;
     text-decoration:none
 
 }
+
 .user{
     display: flex;
     align-items: center;
+}
+.hide{
+    display: none;
 }
 .user i{
     color: var(--dark-color);
@@ -88,6 +126,8 @@ li{
     display: none;
     z-index: 1001;
 }
+
+
 /* Media Querry */
 @media (max-width:1280px) {
 
@@ -106,14 +146,17 @@ li{
 }
 @media (max-width:960px) {
 
+    .bx{
+        display: block;
+    }
 
   .navbar{
     position: absolute;
     top: 100%;
     right: 2%;
-    width: 240px;
-    height:29vh;
-    background: var(--main-color);
+    width: 200px;
+    height:39vh;
+    background: #0000001a;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -121,13 +164,15 @@ li{
     transition: all  .50s ease;
   }
   .navbar a{
-    display: block;
+    display: flexbox;
+    color: #000;
+    flex-wrap: wrap;
     margin: 12px 0;
     padding-top: 0 25px;
     transition: all .50s ease;
   }
   .navbar a:hover{
-    color:#fff;
+    color:#000000;
     transform: translateY(1px);
   }
   .navbar a:active{
@@ -138,3 +183,17 @@ li{
   }
 
 }
+/* active notworking on styles.css ??? */
+.active{
+    font-family: cursive;
+}
+.active a::after{
+    content:""; 
+    float:left;
+    width:100%; 
+    height:2.5px; 
+    border-radius: 10px;
+    background: var(--main-color);
+    color: #ffffff; 
+     
+  }

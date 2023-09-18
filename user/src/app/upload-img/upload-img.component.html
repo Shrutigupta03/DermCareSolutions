@@ -1,0 +1,26 @@
+<div class="img-container">
+    <h2 style="font-weight: bold;">Let's Start!</h2>
+    <p>Add photo to make scan. You can upload photo from the device or take a photo with camera (available for mobiles)</p>
+    <div class="main-section">
+        <div class="img" id="img">
+            <div>
+                <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+            </div>
+            <form action="http://192.168.211.2:5000"p method="POST" enctype = "multipart/form-data">
+                <p class="upload-image">
+                    <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+                    <br>
+                    Upload Image
+                    <input type="file" name="image" (change)="selectFile($event)">
+                </p>
+                <div class="show-img">
+                    <img [src]="url" *ngIf="url">
+                    <div *ngIf="url" class="centertext" style="color: green;">Successfully Uploaded!</div>
+                </div>
+
+                <input class="btn" *ngIf="url" type="submit"/>
+                
+            </form>
+        </div>
+    </div>
+</div>

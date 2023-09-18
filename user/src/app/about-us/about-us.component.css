@@ -1,0 +1,40 @@
+div.about-ai-dermo{
+    margin: 40px;
+    margin-top: 60px;
+    padding: 20px;
+    border-radius: 15px;
+    background-image: url("../../assets/images/layer-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 13px 13px 6px rgb(153, 153, 153);
+}
+div.about-ai-dermo:hover{
+    background: linear-gradient(#161651 2%, #e6e4ff);
+    transition: background-image 5s;
+}
+h2{
+    /* color: rgb(22, 22, 92); */
+    font-weight: bold;
+    margin: 15px 0 40px 0;
+    color: white;
+}
+img{
+    width: 20vw;
+}
+.content{
+    width: 44vw;
+    text-align: left;
+    color: black;
+    /* font-weight: bold; */
+}
+p{
+    font-size: 14px;
+}

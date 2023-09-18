@@ -1,36 +1,43 @@
 div.container{
     display: flex;
     flex-direction: row;
-    margin: 20px;
+    margin: 20px auto;
     height: 60vh;
     border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(235, 235, 255);
+    background-color: rgb(239, 239, 255);
     border-radius: 10px;
-    box-shadow: 185px 1px 73px white inset;
+    box-shadow: 220px 0px 73px white inset;
+}
+h3{
+    font-weight: bold;
 }
 
 button{
-    border-radius: 6px;
-    background-color: rgb(22, 22, 92);
+    border-radius: 30px;
+    background-color: rgb(13, 13, 59);
     color: white;
     padding: 0px 40px;
     margin-top: 20px;
-    margin-right: 30px;
+    margin-right: 10px;
     width: 180px;
     height: 50px;
     font-size: 19px;
-    align-self: flex-end;
-    border: 1px solid rgba(22, 22, 92, 0.94);
+    /* align-self: center; */
+    margin-left: 260px;
+    border: 1px solid rgb(13, 13, 59);
 }
 button:hover{
-    width: 190px;
-    background-color: rgba(22, 22, 92, 0.94);
+    width: 200px;
+    color: white;
+    background-color: rgb(22, 22, 92);
     cursor: pointer;
-    box-shadow: 0px 0px 4px rgba(22, 22, 92, 0.94);
+    transition: width 0.5s ease-in-out;
+    /* box-shadow: 0px 0px 4px gray; */
 }
 
 .content{
+    justify-content: space-evenly;
     display: flex;
     flex-direction: column;
-    padding: 32px 50px;
+    padding: 32px 70px;
 }
