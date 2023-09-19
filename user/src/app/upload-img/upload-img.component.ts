@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UploadImgService } from '../upload-img.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload-img',
   templateUrl: './upload-img.component.html',
   styleUrls: ['./upload-img.component.css']
 })
-export class UploadImgComponent {
-  
-    url: any; //Angular 11, for stricter type
+export class UploadImgComponent{
+  	
+    url: any;
 	msg = "";
-	
-	//selectFile(event) { //Angular 8
-	selectFile(event: any) { //Angular 11, for stricter type
+	selectFile(event: any) { 
 		if(!event.target.files[0] || event.target.files[0].length == 0) {
 			this.msg = 'You must select an image!!';
 			return;
@@ -33,6 +33,8 @@ export class UploadImgComponent {
 			this.url = reader.result; 
 		}
 	}
+
+
 
     // UploadedImg() : void {
 

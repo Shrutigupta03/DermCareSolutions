@@ -2,7 +2,7 @@
     height: fit-content;
     margin: 10px auto;
     box-shadow: -103px 0px 100px white inset;
-    background-image: linear-gradient(to bottom, white , rgb(229, 229, 255) 80%,  rgb(209, 209, 252) 100%);
+    background-image: linear-gradient(to bottom,white, rgb(222, 222, 252) 80%,  rgb(200, 200, 252) 100%);
 }
 
 .hero::before{
