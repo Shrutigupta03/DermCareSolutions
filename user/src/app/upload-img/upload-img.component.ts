@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { UploadImgService } from '../upload-img.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-upload-img',
