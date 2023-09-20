@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,9 +47,9 @@ import { BasicImportanceComponent } from './basic-importance/basic-importance.co
     BrowserModule,
     AppRoutingModule,
     RouterLink,
+    NgbModule,
     FormsModule,
-    ReactiveFormsModule,
-    NgbModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

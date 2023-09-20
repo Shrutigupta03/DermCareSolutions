@@ -1,0 +1,6 @@
+{
+    "/image/*": {
+      "target": "http://localhost:5000/image",
+      "secure": false
+    }
+}

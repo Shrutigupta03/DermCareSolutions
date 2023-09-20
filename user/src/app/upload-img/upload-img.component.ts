@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { UploadImgService } from '../upload-img.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-upload-img',
@@ -34,9 +35,19 @@ export class UploadImgComponent{
 		}
 	}
 
+	constructor(private http: HttpClient) {
+		
+	}
 
-
-    // UploadedImg() : void {
-
-    // }
+	onsubmit(data:any){
+		const rqstdata = { image: data.image };
+		this.http.post(
+			'http://localhost:5000/image', 
+			rqstdata)
+			.subscribe((res) => {
+				console.log(res)
+			}
+		);
+		
+	}
 }
