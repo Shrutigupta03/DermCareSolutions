@@ -1,0 +1,108 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the footer */
+.footer {
+    background-color: rgb(13, 13, 59);
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the container within the footer */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Style for the rows within the container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style for individual footer columns */
+.footer-col {
+    flex: 1;
+    margin-right: 20px;
+    padding: 0 20px;
+}
+
+/* Style for the heading in each column */
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    
+}
+
+/* Style for the unordered lists in each column */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    
+}
+.footer-col li a{
+    color: rgb(190, 214, 214);
+}
+.footer-col .social-links a{
+    
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(159, 159, 159, 0.3);
+    margin: 0 10px 10px 0;
+    line-height: 1.7;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+
+}
+
+.footer-col .social-links a:hover{
+    background-color: aliceblue;
+    color: var(--main-color);
+    
+    /* background-image: linear-gradient(45deg, purple, orange); */
+}
+#fb:hover {
+    color:  #1877F2;
+}
+#ig:hover{
+    color: #E4405F;
+}
+#li:hover {
+    color: #0A66C2;
+}
+ #tw:hover {
+    color: #1DA1F2;
+}
+#wa:hover {
+    color: #1df26b;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 8px;
+  }
+
+ 
+/* Media  queries */
+
+@media (max-width: 1000px) {
+    .footer-col {
+        width: 30%;
+        margin-bottom: 30px;
+    }
+   
+}
+
+@media (max-width: 600px) {
+    .footer-col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+   
+}
