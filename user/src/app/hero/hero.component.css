@@ -1,16 +1,15 @@
 .hero{
-    height: 82vh;
+    height: fit-content;
     margin: 10px auto;
-    padding: 60px 0;
-    box-shadow: 220px 0px 103px white inset;
-    background-image: linear-gradient(to bottom, white , rgb(217, 217, 249) 90%,  rgb(200, 200, 251) 100%);
+    box-shadow: -103px 0px 100px white inset;
+    background-image: linear-gradient(to bottom,white, rgb(222, 222, 252) 80%,  rgb(200, 200, 252) 100%);
 }
 
 .hero::before{
     content: "";
     position: absolute;
     /* background: url(../../../assets/images/Home1Hero-main.jpeg) no-repeat center center/cover; */
-    height: 100vh;
+    height: fit-content;
     padding-top: 20vh;
     z-index: -1;
 }
@@ -18,42 +17,59 @@
 .hero-container{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: auto;
-    
 }
 .left-text{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     padding-left: 70px;
-    top: 40px;
-    margin: 20px 40px;
-    
+    margin: 15px 20px;
+    /* animation: slide-right 0.8s ease-out; */
+    /* animation: fade-in 1s ease-in; */
+    align-items: left;
+    /* overflow: hidden; */
 }
-h3{
-    font-size: 2rem;
+h1{
+    /* font-size: 2rem; */
     font-weight: bold;
+
     padding: 0 20px;
+    animation: fade-in 0.5s ease-in;
+    overflow: hidden;
+    color: rgb(13, 13, 59);
 }
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
 p{
     font-size: 1rem;
     font-weight: 300;
     padding: 10px 20px;
-    
-    
+    overflow: hidden;
+    animation: fade-in 0.5s ease-in;
 }
 button{
-   
     border-radius: 30px;
     background-color: rgb(13, 13, 59);
     color: white;
     padding: 0px 20px;
     margin-left: 20px;
-    /* margin-right: 10px; */
-    /* margin-right: 30px; */
     width: 150px;
     height: 50px;
-    font-size: 1rem;
-    align-self: flex-end;
+    font-size: 1.1rem;
+    align-self: flex-start;
     border: 1px solid var(--main-color);
+    animation: fade-in 0.5s ease-in;
 }
 
   
@@ -61,8 +77,6 @@ button{
 div a.text{
   animation: bounce 4s infinite;
 }
-
-
 
   @keyframes pulseOut {
     0%{
@@ -76,70 +90,65 @@ div a.text{
     }
   }
   
- 
-  
-  
-  
   a.text {
     animation: bounce 10s 4;
     animation-delay: 10s;
   }
   
-button::before{
-    content: '';
-    position: absolute;
-    inset: 0;
-    /* transform: scaleX(0); */
-    transform-origin: left top; 
-}
 button:hover{
-    /* width: 190px; */
-    color: white;
     background-color: rgba(22, 22, 92);
-    transition: width 2.4s ease-in; ;
+    transition: width 0.5s ease-in; ;
     cursor: pointer;
-    /* scale: 1.1; */
-    animation: pulseOut 3s infinite;
-    /* box-shadow: 0px 0px 4px gray; */
+    width: 165px;
+    transition: width 0.5s ease;
 }
 
-.right-content{
-    position: absolute;
-    top: 70px;
-    right: 30px;
-    /* padding-top: 30px; */
-}
-/* .right-content img{
-    height: 100%;
-} */
 a{
     color: #fff;
     text-decoration: none;
 }
-
-
 .img-hero{
+    overflow: hidden;
     width: 500px;
+    margin-top: -45px;
     mix-blend-mode:multiply;
+    animation: 1s fade-in;
 }
 
 .img-hero img{
     background-blend-mode: multiply; 
-    animation: fadeOut 10s   infinite top;
+    animation: fade-in 1s;
 }
-
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes fade-out {
+  from{
+      opacity: 1;
+  }
+  to{
+      opacity: 0.8;
+  }
+  
+}
 
 /* media querry */
 @media (max-width:960px) {
 .hero{
     text-align: center;
-    height: 100vh;
+    height: fit-content;
       margin: 0 auto;
     /* height: 60vh; */
    
     border-radius: 10px;
     box-shadow: 220px 0px 73px white inset;
-    background-image: linear-gradient(white , rgb(240, 240, 254) 50%, rgb(234, 234, 254) 90%);
+    background-image: linear-gradient(white , rgb(236, 236, 255) 50%, rgb(233, 233, 252) 90%);
 }
 .img-hero{
 

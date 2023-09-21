@@ -16,6 +16,7 @@ import {BenefitsComponent} from './benefits/benefits.component';
 import {HeaderComponent} from './header/header.component';
 import {HeroComponent} from './hero/hero.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { BasicImportanceComponent } from './basic-importance/basic-importance.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { GetStartedComponent } from './get-started/get-started.component';
     HeroComponent,
     BenefitsComponent,
     HeaderComponent,
-    GetStartedComponent
+    GetStartedComponent,
+    BasicImportanceComponent
   ],
   imports: [
     BrowserModule,

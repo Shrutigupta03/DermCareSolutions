@@ -6,16 +6,54 @@
   <input type=submit value=predict>
   <br>
   <h3>Prediction: {{prediction}}</h3>
-</form> -->
+</form>
+</html> -->
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Result Page</title>
 </head>
+<style>
+  body{
+    margin: 0;
+
+  }
+
+  div.img-container{
+  height: 100vh;
+  max-height: fit-content;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(white , rgb(225, 225, 253) 50%, rgb(204, 204, 254) 90%);
+  max-height: fit-content;
+}
+
+  div.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    height: fit-content;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px grey;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+</style>
 <body>
-    <h1>Result Page</h1>
-    <p>{{prediction}}</p>
-    <!-- <iframe src="{{ url_for('static', filename='user/src/app/result/result.component.html') }}"></iframe> -->
+  <div class="img-container">
+   <div class="main">
+    <h1 style="color: rgb(13, 13, 59); margin-bottom:0px; ">Result:</h1>
+    <p style="font-size: 30px; font-weight:bold; margin-top: 5px">{{prediction}}</p>
+   </div>
+  </div>
 </body>
 </html>
