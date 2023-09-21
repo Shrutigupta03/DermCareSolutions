@@ -66,6 +66,23 @@
 .footer-col .social-links a:hover{
     background-color: aliceblue;
     color: var(--main-color);
+    
+    /* background-image: linear-gradient(45deg, purple, orange); */
+}
+#fb:hover {
+    color:  #1877F2;
+}
+#ig:hover{
+    color: #E4405F;
+}
+#li:hover {
+    color: #0A66C2;
+}
+ #tw:hover {
+    color: #1DA1F2;
+}
+#wa:hover {
+    color: #1df26b;
 }
 .footer-col ul li:not(:last-child){
     margin-bottom: 8px;

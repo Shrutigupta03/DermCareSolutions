@@ -40,7 +40,7 @@ button:hover{
     display: flex;
     align-items: center;
     margin: auto;
-    margin-left: 0;
+    margin-left: 40px;
 }
 .logo i{
     color: var(--main-color);
@@ -63,7 +63,7 @@ li{
 }
 .navbar a{
     color: var(--dark-color);
-    font-size: 1.425rem;
+    font-size: 1.2rem;
     font-weight: 500;
     padding: 2px 0px;
     margin: 0 10px;
