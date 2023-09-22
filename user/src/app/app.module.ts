@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -49,6 +49,8 @@ import { BasicImportanceComponent } from './basic-importance/basic-importance.co
     RouterLink,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
+    NgbModule,
     HttpClientModule
   ],
   providers: [],

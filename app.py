@@ -4,10 +4,19 @@ from flask_cors import CORS, cross_origin
 import tensorflow as tf
 import numpy as np
 import cv2
-app = Flask(__name__, template_folder="templates")
+app = Flask(__name__)
 cors = CORS(app)
 
 UPLOAD_FOLDER = "images" 
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 model = tf.keras.models.load_model("model/SkinCancer.h5")
 class_names = ["Actinic keratoses and intraepithelial carcinomae", "basal cell carcinoma", "benign keratosis-like lesions", "dermatofibroma", "melanocytic nevi", "pyogenic granulomas and hemorrhage","melanoma"]
 
@@ -29,20 +38,26 @@ def predict_skin_disease(image_path, model):
 
     return predicted_class_name
 
-@app.route("/image", methods=["GET", "POST"])
-def upload_predict():
-    if request.method == "POST":
-        data = request.json
-        image_file = request.files["image"]
-        if image_file:
-            image_location = os.path.join(
-                UPLOAD_FOLDER,
-                image_file.filename
-            )
-            image_file.save(image_location)
-            pred = predict_skin_disease(image_location, model)
-            return render_template('index.html', prediction=pred)
-    return render_template('index.html', prediction=0)
+
+
+@app.route('/upload', methods=['POST'])
+def upload_image():
+    if 'image' not in request.files:
+        return jsonify('No file part'), 400
+
+    file = request.files['image']
+
+    if file.filename == '':
+        return jsonify('No selected file'), 400
+
+    if file and allowed_file(file.filename):
+        filename = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+        file.save(filename)
+        pred = predict_skin_disease(filename, model)
+        return jsonify(message=pred)
+
+    return jsonify(message='File type not allowed'), 400
+
 
 if __name__ == "__main__":
     app.run(port=5000, host="0.0.0.0", debug=True)

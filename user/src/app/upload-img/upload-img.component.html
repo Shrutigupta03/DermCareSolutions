@@ -1,3 +1,4 @@
+<div class="main-container">
 <div class="img-container">
     <h2 style="font-weight: bold;">Let's Start!</h2>
     <p>Add photo to make scan. You can upload photo from the device or take a photo with camera (available for mobiles)</p>
@@ -6,21 +7,23 @@
             <div>
                 <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
             </div>
-            <form #upload_image="ngForm" (ngSubmit)="onsubmit(upload_image.value)" enctype = "multipart/form-data">
+            <form (submit)="onSubmit()">
                 <p class="upload-image">
                     <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
                     <br>
                     Upload Image
-                    <input type="file" name="image" (change)="selectFile($event)" ngModel #image="ngModel">
+                    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
                 </p>
                 <div class="show-img">
-                    <img [src]="url" *ngIf="url">
-                    <div *ngIf="url" class="centertext" style="color: #08c508;">Successfully Uploaded!</div>
+                    <img [src]="selectedImage" *ngIf="selectedFile" />
+                    <div *ngIf="selectedImage" class="centertext" style="color: #08c508;">Successfully Uploaded!</div> 
                 </div>
-
-                <input class="btn" *ngIf="url" type=submit value="Submit">
-                
-            </form>
+                <input class="btn" *ngIf="selectedFile" type="submit" value="Submit" />
+                </form>
         </div>
     </div>
+</div>
+<div class="res" *ngIf="response">
+    <h2 >Disease :<strong>{{ response }}</strong></h2>
+  </div>
 </div>

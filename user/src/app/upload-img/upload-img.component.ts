@@ -1,53 +1,59 @@
-import { Component, OnInit} from '@angular/core';
-import { UploadImgService } from '../upload-img.service';
+import { Component, OnInit, OnDestroy} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs';
 @Component({
   selector: 'app-upload-img',
   templateUrl: './upload-img.component.html',
   styleUrls: ['./upload-img.component.css']
 })
 export class UploadImgComponent{
-  	
-    url: any;
 	msg = "";
-	selectFile(event: any) { 
+
+	selectedFile: File | null = null;
+	selectedImage: string | ArrayBuffer | null = null;
+  	response: string | null = null;
+
+  	constructor(private http: HttpClient) { }
+
+  	onFileSelected(event: any) {
 		if(!event.target.files[0] || event.target.files[0].length == 0) {
 			this.msg = 'You must select an image!!';
 			return;
 		}
-		
 		var mimeType = event.target.files[0].type;
-		
+
 		if (mimeType.match(/image\/*/) == null) {
 			this.msg = "Only images are supported!!";
 			return;
 		}
-		
+
 		var reader = new FileReader();
-		reader.readAsDataURL(event.target.files[0]);
-		
+		reader.readAsDataURL(event.target.files[0] as File);
+
 		reader.onload = (_event) => {
 			this.msg = "";
-			this.url = reader.result; 
+			this.selectedFile = event.target.files[0] as File;
+			this.selectedImage = this.selectedFile ? URL.createObjectURL(this.selectedFile) : null;
 		}
-	}
 
-	constructor(private http: HttpClient) {
-		
-	}
+  	}
 
-	onsubmit(data:any){
-		const rqstdata = { image: data.image };
-		this.http.post(
-			'http://localhost:5000/image', 
-			rqstdata)
-			.subscribe((res) => {
-				console.log(res)
-			}
-		);
-		
-	}
+  	onSubmit() {
+    	if (this.selectedFile) {
+      	const formData = new FormData();
+      	formData.append('image', this.selectedFile);
+
+      	this.http.post<any>('http://localhost:5000/upload', formData).subscribe(
+		(response) => {
+			this.response = response.message;
+        },
+        (error) => {
+          console.error('Error uploading image:', error);
+        }
+      );
+    }
+  }
 }
