@@ -1,29 +1,111 @@
 <div class="main-container">
-<div class="img-container">
-    <h2 style="font-weight: bold;">Let's Start!</h2>
-    <p>Add photo to make scan. You can upload photo from the device or take a photo with camera (available for mobiles)</p>
-    <div class="main-section">
-        <div class="img" id="img">
-            <div>
-                <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
-            </div>
-            <form (submit)="onSubmit()">
-                <p class="upload-image">
-                    <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
-                    <br>
-                    Upload Image
-                    <input type="file" (change)="onFileSelected($event)" accept="image/*" />
-                </p>
-                <div class="show-img">
-                    <img [src]="selectedImage" *ngIf="selectedFile" />
-                    <div *ngIf="selectedImage" class="centertext" style="color: #08c508;">Successfully Uploaded!</div> 
+    <div class="manage-initial-height">
+        <div class="img-container">
+            <h2 style="font-weight: bold;">Let's Start!</h2>
+            <p>Add photo to make scan. You can upload photo from the device or take a photo with camera (available for mobiles)</p>
+            <div class="main-section">
+                <div class="img" id="img">
+                    <div>
+                        <div [innerHtml]='msg' *ngIf="msg" style="color: red;">{{ msg }}</div>
+                    </div>
+                    <form (submit)="onSubmit()">
+                        <p class="upload-image">
+                            <i class="fa fa-upload fa-2x" aria-hidden="true"></i>
+                            <br>
+                            Upload Image
+                            <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+                        </p>
+                        <div class="show-img" *ngIf="show">
+                            <img [src]="selectedImage" *ngIf="selectedFile" />
+                            <div *ngIf="selectedImage" class="centertext" style="color: #08c508;">Successfully Uploaded!</div> 
+                        </div>
+                        <input class="btn" *ngIf="selectedFile && show" type="submit" value="Submit" />
+                        </form>
                 </div>
-                <input class="btn" *ngIf="selectedFile" type="submit" value="Submit" />
-                </form>
+            </div>
+        </div>
+        <div *ngIf="!show">
+            <p style="text-align: center; color: red; padding-top: 30px;"><strong style="text-decoration: underline;">Note:</strong> Rely on the results only if the symptoms align.</p>
+            <div  class="uploaded-img">
+                <h5>Uploaded Image:</h5>
+                <img [src]="selectedImage" />
+            </div>
+            <div class="res">
+                <h3>Detected Disease : <strong style="text-decoration: underline;">{{ response }}</strong></h3>
+            </div>
+            <br>
+            <div class="symptoms">
+            <div *ngIf="res==='BCC'"><strong>Symptoms:</strong><ul>
+                <li>Lumps, bumps, pimples, scabs or scaly lesions on your skin.</li>
+                <li>The lump may be slightly see-through (translucent) and close to your normal skin color or white to pink, brown to black or black to blue.</li>
+                <li>The lump may appear shinier than the skin around it with tiny visible blood vessels.</li>
+                <li>The lump may grow slowly over time.</li>
+                <li>The lump may be itchy or painful.</li>
+                <li>The lump may form an ulcer, which can ooze clear fluid or bleed with contact.</li>
+            </ul></div>
+
+            <div *ngIf="res==='AK'"><strong>Symptoms:</strong>
+                <p>Usually, the first signs of actinic keratosis are rough, raised bumps on your skin. They can vary in color but often have a yellow or brown crust on top. These bumps may be:
+                </p>
+                <ul>
+                    <li>Grey</li>
+                    <li>Pink</li>
+                    <li>Red</li>
+                    <li>The same color as your skin</li>
+                </ul>
+                <p><strong>Symptoms may also include:</strong></p>
+                <ul>
+                <li>Bleeding.</li>
+                <li>Burning, stinging or itching.</li>
+                <li>Dry & scaly lips.</li>
+                <li>Hornlike skin growths that stick out (like an animal’s horn).</li>
+                <li>The lump may be itchy or painful.</li>
+                <li>Loss of color in the lips.</li>
+                <li>Pain or tenderness.</li>
+                </ul>
+            </div>
+
+            <div *ngIf="res==='BK-lL'"><strong>Symptoms:</strong><ul>
+                <li>A round or oval-shaped waxy or rough bump, typically on the face, chest, a shoulder or the back.</li>
+                <li>A flat growth or a slightly raised bump with a scaly surface, with a characteristic "pasted on" look.</li>
+                <li>Varied size, from very small to more than 1 inch (2.5 centimeters) across.</li>
+                <li>Varied number, ranging from a single growth to multiple growths.</li>
+                <li>Very small growths clustered around the eyes or elsewhere on the face, sometimes called flesh moles or dermatosis papulosa nigra, common on Black or brown skin.</li>
+                <li>Varied in color, ranging from light tan to brown or black.</li>
+                <li>Itchiness.</li>
+            </ul></div>
+
+            <div *ngIf="res==='DMF'"><strong>Symptoms:</strong><ul>
+                <li>Cellular dermatofibromas look like small round or oval bumps.</li>
+                <li>They’re usually less than 1 centimeter (cm) in diameter. They may be flesh-colored, brown or reddish-brown.</li>
+                <li> dermatofibromas form on your arms or legs.</li>
+                <li>They may feel firm to the touch and can be itchy, tender or painful.</li>
+                <li>Sometimes, they’re shaped like a dimple — the center of the lesion falls in, and the edges of the lesion pucker around it.</li>
+            </ul></div>
+
+            <div *ngIf="res==='MN'"><strong>Symptoms:</strong><ul>
+                <li>Tan to dark brown, pale pink, and occasionally black in color.</li>
+                <li>Round or oval in shape.</li>
+                <li>Smooth borders.</li>
+                <li>Uniform color throughout.</li>
+                <li>Symmetry (when a line is drawn within them, the two halves have the same appearance).</li>
+                <li>Varied in color, ranging from light tan to brown or black.</li>
+            </ul></div>
+
+            <div *ngIf="res==='PGH'"><strong>Symptoms:</strong><ul>
+                <li>A small red lump on the skin that bleeds easily.</li>
+                <li>Often found at the site of a recent injury.</li>
+                <li>Usually seen on hands, arms, and face, but they may develop in the mouth (most often in pregnant women).</li>
+            </ul></div>
+
+            <div *ngIf="res==='MLNM'"><strong>Symptoms:</strong><ul>
+                <li>A large brownish spot with darker speckles.</li>
+                <li>A mole that changes in color, size or feel or that bleeds.</li>
+                <li>A small lesion with an irregular border and portions that appear red, pink, white, blue or blue-black.</li>
+                <li>A painful lesion that itches or burns</li>
+                <li>Dark lesions on your palms, soles, fingertips or toes, or on mucous membranes lining your mouth, nose, vagina or anus</li>
+            </ul></div>
+            </div>
         </div>
     </div>
-</div>
-<div class="res" *ngIf="response">
-    <h3>Disease :<strong>{{ response }}</strong></h3>
-  </div>
 </div>

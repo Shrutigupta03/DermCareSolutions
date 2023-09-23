@@ -4,7 +4,7 @@
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-image: linear-gradient(white , rgb(229, 229, 252) 50%, rgb(218, 218, 255) 90%);
+    background: linear-gradient(white , rgb(235, 235, 253) 100%);
 }
 
 .carousel-container{

@@ -21,7 +21,7 @@ model = tf.keras.models.load_model("model/SkinCancer.h5")
 class_names = ["Actinic keratoses and intraepithelial carcinomae", "basal cell carcinoma", "benign keratosis-like lesions", "dermatofibroma", "melanocytic nevi", "pyogenic granulomas and hemorrhage","melanoma"]
 
 def predict_skin_disease(image_path, model):
-    class_names = ["Actinic keratoses and intraepithelial carcinomae", "basal cell carcinoma", "benign keratosis-like lesions", "dermatofibroma", "melanocytic nevi", "pyogenic granulomas and hemorrhage","melanoma"]
+    class_names = ["Actinic keratoses and intraepithelial carcinomae", "Basal Cell Carcinoma", "Benign Keratosis-like Lesions", "Dermatofibroma", "Melanocytic Nevi", "Pyogenic Granulomas and Hemorrhage","Melanoma"]
 
     # Load and preprocess image
     original_image = cv2.imread(image_path)
@@ -56,7 +56,7 @@ def upload_image():
         pred = predict_skin_disease(filename, model)
         return jsonify(message=pred)
 
-    return jsonify(message='File type not allowed'), 400
+    return jsonify('File type not allowed'), 400
 
 
 if __name__ == "__main__":

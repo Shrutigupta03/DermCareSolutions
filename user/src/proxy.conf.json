@@ -1,6 +1,6 @@
 {
-    "/image/*": {
-      "target": "http://localhost:5000/image",
+    "/api/*": {
+      "target": "http://localhost:5000/",
       "secure": false
     }
 }
