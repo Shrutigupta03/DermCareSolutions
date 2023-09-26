@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router, RouterLink } from '@angular/router';
+import { pdfMake } from "pdfmake/build/pdfmake";  
+import { pdfFonts } from "pdfmake/build/vfs_fonts";  
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,7 +22,7 @@ import {HeroComponent} from './hero/hero.component';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
 import { BasicImportanceComponent } from './basic-importance/basic-importance.component';
-
+import { PdfGeneratorServiceService } from './pdf-generator-service.service';
 
 @NgModule({
   declarations: [
@@ -50,9 +52,9 @@ import { BasicImportanceComponent } from './basic-importance/basic-importance.co
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [PdfGeneratorServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
