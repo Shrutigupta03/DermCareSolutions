@@ -26,11 +26,27 @@ export class UploadImgComponent{
 	userAnswers: string[] = ['', ''];
 	questions = [
 		{
-		    text: 'Symptoms:',
-		    options: []
+		    text: 'Symptoms: ',
+		    options: [],
 		},
 		{
-			text: 'What is your skin type?',
+			text: 'Name: ',
+			answer: '', 
+		},
+		{
+			text: 'Age: ',
+			answer: '', 
+		},
+		{
+			text: 'Gender: ',
+			answer: '', 
+		},
+		{
+			text: 'Blood-group: ',
+			answer: '', 
+		},
+		{
+			text: 'skin type: ',
 			answer: '', 
 		},
 		{
@@ -215,6 +231,12 @@ export class UploadImgComponent{
 	  }
 	
 	  generatePDF() {
+
+		// if (this.questions.every((question) => question.options.every((option) => !option.selected))) {
+		// 		alert('Please select at least one answer before generating the PDF.');		
+		// 	return; 
+		// }
+
 		const docDefinition = {
 		  content: [
 			{ text: 'Skin Diagnosis Report', style: 'header' },
@@ -255,7 +277,7 @@ export class UploadImgComponent{
 			  }
 			}
   
-			docDefinition.content.push({ text: '\n' });
+			docDefinition.content.push({ text: '\n'});
 	  	}
 	  	const pdfDocGenerator = pdfMake.createPdf(docDefinition);
 	  	pdfDocGenerator.open();

@@ -18,7 +18,7 @@
                         </p>
                         <div class="show-img" *ngIf="show">
                             <img [src]="selectedImage" *ngIf="selectedFile" />
-                            <div *ngIf="selectedImage" class="centertext" style="color: #2ad72a;">Successfully Uploaded!
+                            <div *ngIf="selectedImage" class="centertext" style="color: #2ad72a;">Successfully<br>Uploaded!
                             </div>
                         </div>
                         <input class="btn" *ngIf="selectedFile && show" type="submit" value="Submit" />
@@ -330,10 +330,32 @@
                 <h3 style="font-weight: bold;">Report Generation</h3>
                 <h6>Fill details to generate report</h6>
                 <form #questionForm="ngForm" (ngSubmit)="generatePDF()">
+                    <div class="form-group justify-center">
+                        <label for="description"><p>Name:</p></label>
+                        <input type="text" id="duration" placeholder="Enter Your Name" [(ngModel)]="questions[1].answer" name="duration">
+                    </div>
+                    <div class="form-group justify-center">
+                        <label for="description"><p>Age:</p></label>
+                        <input type="number" id="duration" placeholder="Enter your age" [(ngModel)]="questions[2].answer" name="duration">
+                    </div>
+                    <div class="form-group justify-center">
+                        <label for="description"><p>Gender:</p></label>
+                        <input type="text" id="duration" [(ngModel)]="questions[3].answer" name="duration">
+                    </div>
+                    <div class="form-group justify-center">
+                        <label for="description"><p>Blood-group:</p></label>
+                        <input type="text" id="duration" [(ngModel)]="questions[4].answer" name="duration">
+                    </div>
+
+                    <div class="form-group justify-center">
+                        <label for="description"><p>Skin-type: </p></label>
+                        <input type="text" id="duration" [(ngModel)]="questions[5].answer" name="duration">
+                    </div>
+
                     <div class="form-group">
                         <p>Choose Symptoms:</p>
                         <div *ngFor="let option of questions[0].options; let j = index">
-                            <label>
+                            <label class="options">
                                 <input type="checkbox" name="q0_option{{ j }}"
                                     [(ngModel)]="questions[0].options[j].selected" />
                                 {{ option.text }}
@@ -342,18 +364,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="description"><p>What is your skin type?</p></label>
-                        <input type="text" id="duration" [(ngModel)]="questions[1].answer" name="duration">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="duration"><p>How long have you been experiencing these symptoms?</p></label>
-                        <input type="text" id="duration" [(ngModel)]="questions[2].answer" name="duration">
+                        <label for="duration"><p>How long have you been experiencing these symptoms:</p></label>
+                        <input type="text" id="duration" [(ngModel)]="questions[6].answer" name="duration">
                     </div>
 
                     <div class="form-group description-textarea">
                         <label for="description"><p>Provide a brief description of your condition:</p></label>
-                        <textarea id="description" [(ngModel)]="questions[3].answer" name="description"></textarea>
+                        <br>
+                        <textarea id="description" [(ngModel)]="questions[7].answer" name="description"></textarea>
                     </div>
 
                     <button style=" margin: 20px 0; 
@@ -361,11 +379,18 @@
                     border-color: rgb(93, 121, 198);
                     border-radius: 30px;
                     font-size: 18px;
-                    width: 180px;
-                    padding: 10px 20px;" type="submit">Generate PDF</button>
+                    padding: 10px 12px;" type="submit">Generate PDF</button>
                 </form>
-
             </div>
+            <button *ngIf="report" style=" margin: 10px 0; 
+            background-color: rgb(93, 121, 198); 
+            border-color: rgb(93, 121, 198);
+            border-radius: 30px;
+            font-size: 18px;
+            padding: 10px 12px;
+            position: relative;
+            left: 75%;">Consult to a Doctor</button>
+
         </div>
     </div>
 </div>
