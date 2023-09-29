@@ -35,5 +35,8 @@ export class NavbarComponent {
   toBenefits(){
     document.getElementById("benefits").scrollIntoView({behavior:'smooth'});
   }
+  meetDoctor(){
+		this.router.navigate(['connect-to-doctor']);
+	}
 
 }

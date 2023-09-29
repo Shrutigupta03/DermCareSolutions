@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ConnectToDoctorComponent {
   originalDoctors = [
-    { name: 'Dr. Nancy', picture: 'images/Doctor_1.jpg', specialization: 'Pediatric Dermatologist', experience: 2, price: 80, rating: 4.5 },
-    { name: 'Dr. Shreya', picture: 'images/Doctor_2.jpg', specialization: 'Surgical Dermatologist', experience: 11, price: 100, rating: 4.7 },
-    { name: 'Dr. Yash', picture: 'images/Doctor_3.jpg', specialization: 'Pediatric Dermatologist', experience: 8, price: 80, rating: 4.1 },
-    { name: 'Dr. Rohit', picture: 'images/Doctor_4.jpg', specialization: 'Allergist-Immunologist', experience: 2, price: 80, rating: 4.2 },
+    { name: 'Dr. Nancy', picture: '../../assets/Doctor-images/Doctor_1.jpg', specialization: 'Pediatric Dermatologist', experience: 2, price: 300, rating: 4.5 },
+    { name: 'Dr. Shreya', picture: '../../assets/Doctor-images/Doctor_2.jpg', specialization: 'Surgical Dermatologist', experience: 11, price: 400, rating: 4.7 },
+    { name: 'Dr. Yash', picture: '../../assets/Doctor-images/Doctor_3.jpg', specialization: 'Pediatric Dermatologist', experience: 8, price: 500, rating: 4.1 },
+    { name: 'Dr. Rohit', picture: '../../assets/Doctor-images/Doctor_4.jpg', specialization: 'Allergist-Immunologist', experience: 2, price: 250, rating: 4.2 },
     // Add more dummy data as needed
   ];
 

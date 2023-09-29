@@ -4,8 +4,6 @@ import { PdfGeneratorServiceService } from '../pdf-generator-service.service';
 import { HttpClient } from '@angular/common/http';
 import pdfMake from "pdfmake/build/pdfmake";  
 import pdfFonts from "pdfmake/build/vfs_fonts"; 
-// import { Router,ActivatedRoute } from '@angular/router';
-// import { Router ,Route} 	from '@angular/router';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs; 
 @Component({
@@ -30,6 +28,7 @@ export class UploadImgComponent{
 
 	userAnswers: string[] = ['', ''];
 	questions = [
+
 		{
 		    text: 'Symptoms: ',
 		    options: [],
@@ -64,7 +63,7 @@ export class UploadImgComponent{
 		},
 	];
 	textQuestions: string[] = ['', ''];
-	// router: any;
+// router: any;
 
   	constructor(private http: HttpClient, private pdfService: PdfGeneratorServiceService,private router: Router){}
 
@@ -228,7 +227,6 @@ export class UploadImgComponent{
 			);
 		}
 		else {
-		  // Default options if no condition matches
 		  options.push(
 			{ text: 'Default Option', selected: false }
 		  );
@@ -289,10 +287,8 @@ export class UploadImgComponent{
 	  	pdfDocGenerator.open();
 	
 	}
-	// constructor(private http: HttpClient, private pdfService: PdfGeneratorServiceService, private router: Router) {}
 
-	meetDoctor():void
-	{
+    meetDoctor():void{
 		this.router.navigate(['connect-to-doctor']);
 	}
 

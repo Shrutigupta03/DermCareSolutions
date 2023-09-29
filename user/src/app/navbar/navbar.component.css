@@ -60,13 +60,14 @@ li{
     display: flex;
     margin: auto;
     margin-left: 0;
+    justify-content: center;
 }
 .navbar a{
     color: var(--dark-color);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
     padding: 2px 0px;
-    margin: 0 10px;
+    margin: 0;
     transition: all 1s ease;
     text-decoration:none
 }
@@ -140,7 +141,7 @@ li{
     
     .navbar a{
         padding: 5px 10px;
-        margin: 0 25px;
+        margin: 0 10px;
 
     }
 }
