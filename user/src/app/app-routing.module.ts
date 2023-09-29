@@ -11,6 +11,7 @@ import {ImageComponent} from './image/image.component';
 import { ErrorComponent } from './error/error.component';
 import { BenefitsComponent } from './benefits/benefits.component';
 import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
+import { ConnectToDoctorComponent   } from './connect-to-doctor/connect-to-doctor.component';
 const routes: Routes = [
   // { path:'', redirectTo:'home',pathMatch:'full'},
   {path:'', component:HomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path:'check', component:CrouselComponent },
   { path:'image', component:UploadImgComponent },
   { path:'result', component:ResultComponent},
+  {path:'connect-to-doctor',component:ConnectToDoctorComponent},
   
   {path:"**", component:ErrorComponent}
     

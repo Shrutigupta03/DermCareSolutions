@@ -1,0 +1,130 @@
+.meetDoctor-container{
+    margin: 0 auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* width: 100vw; */
+    background: linear-gradient(white , rgb(235, 235, 253) 100%);
+}
+svg{
+    
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    height: 40px;
+    position: relative;
+    left: 40%;
+    width:40px;
+    text-align: center;
+   
+}
+.main-title {
+    text-align: left;
+    margin: 50px;
+    position: relative;
+    text-decoration: none;
+    
+}
+
+
+.main-title::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px; /* adjust the thickness of the underline */
+    background-color: var(--main-color); /* adjust the color of the underline */
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease; /* add a smooth transition effect */
+}
+
+.main-title:hover::after {
+    width: 20%;
+}
+.main-title::after {
+    width: 10%;
+}
+  .search-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input, select, button {
+    margin: 5px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+
+  
+  .doctor-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .doctor-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    background-color: #fff;
+  }
+  
+  .doctor-card:hover {
+    transform: scale(1.05);
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-details {
+    text-align: center;
+  }
+  
+  h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .specialization {
+    font-style: italic;
+    color: #666;
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #666;
+  }
+  .btn-card{
+    border-radius: 30px;
+    background-color: rgb(13, 13, 59);
+    color: white;
+    padding: 0px 10px;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    align-self: flex-end;
+}
+.btn-card:hover{
+    /* width: 190px; */
+    color: white;
+    background-color: rgba(22, 22, 92);
+    transition: width 0.6s ease-in-out; ;
+    cursor: pointer;
+    /* box-shadow: 0px 0px 4px gray; */
+}
+button.search-button {
+    background-color: --;
+    color: var(--main-color);
+    cursor: pointer;
+  }

@@ -23,6 +23,7 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
 import { BasicImportanceComponent } from './basic-importance/basic-importance.component';
 import { PdfGeneratorServiceService } from './pdf-generator-service.service';
+import { ConnectToDoctorComponent } from './connect-to-doctor/connect-to-doctor.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PdfGeneratorServiceService } from './pdf-generator-service.service';
     HeaderComponent,
     GetStartedComponent,
     WhyToChoseComponent,
-    BasicImportanceComponent
+    BasicImportanceComponent,
+    ConnectToDoctorComponent
   ],
   imports: [
     BrowserModule,

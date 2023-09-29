@@ -382,14 +382,7 @@
                     padding: 10px 12px;" type="submit">Generate PDF</button>
                 </form>
             </div>
-            <button *ngIf="report" style=" margin: 10px 0; 
-            background-color: rgb(93, 121, 198); 
-            border-color: rgb(93, 121, 198);
-            border-radius: 30px;
-            font-size: 18px;
-            padding: 10px 12px;
-            position: relative;
-            left: 75%;">Consult to a Doctor</button>
+            <button  *ngIf="report" class="connect-Dr" (click)="meetDoctor()">Consult to a Doctor</button>
 
         </div>
     </div>

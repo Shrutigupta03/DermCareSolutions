@@ -1,9 +1,11 @@
-import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Component} from '@angular/core';
+import { Router,ActivatedRoute } from '@angular/router';
 import { PdfGeneratorServiceService } from '../pdf-generator-service.service';
 import { HttpClient } from '@angular/common/http';
 import pdfMake from "pdfmake/build/pdfmake";  
 import pdfFonts from "pdfmake/build/vfs_fonts"; 
-import html2canvas from 'html2canvas';
+// import { Router,ActivatedRoute } from '@angular/router';
+// import { Router ,Route} 	from '@angular/router';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs; 
 @Component({
@@ -12,6 +14,9 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
   styleUrls: ['./upload-img.component.css']
 })
 export class UploadImgComponent{
+
+	
+
 	msg: string | null = null;
 	selectedFile: File | null = null;
 	selectedImage: string | ArrayBuffer | null = null;
@@ -59,8 +64,9 @@ export class UploadImgComponent{
 		},
 	];
 	textQuestions: string[] = ['', ''];
+	// router: any;
 
-  	constructor(private http: HttpClient, private pdfService: PdfGeneratorServiceService){}
+  	constructor(private http: HttpClient, private pdfService: PdfGeneratorServiceService,private router: Router){}
 
 	onFileSelected(event: any) {
 		this.show = true;
@@ -283,4 +289,11 @@ export class UploadImgComponent{
 	  	pdfDocGenerator.open();
 	
 	}
+	// constructor(private http: HttpClient, private pdfService: PdfGeneratorServiceService, private router: Router) {}
+
+	meetDoctor():void
+	{
+		this.router.navigate(['connect-to-doctor']);
+	}
+
 }

@@ -303,3 +303,13 @@ textarea{
   font-size: 15px;
   color: rgb(100, 100, 100);
 }
+.connect-Dr{
+  margin: 10px 0; 
+  background-color: rgb(93, 121, 198); 
+  border-color: rgb(93, 121, 198);
+  border-radius: 30px;
+  font-size: 18px;
+  padding: 10px 12px;
+  position: relative;
+  left: 75%;
+}
