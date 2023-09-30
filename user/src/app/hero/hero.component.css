@@ -2,7 +2,7 @@
     height: fit-content;
     margin: 10px auto;
     box-shadow: -103px 0px 100px white inset;
-    background-image: linear-gradient(to bottom,white, rgb(222, 222, 252) 80%,  rgb(200, 200, 252) 100%);
+    background-image: linear-gradient(to bottom,white, rgb(222, 222, 252) 100%,  rgb(200, 200, 252) 80%);
 }
 
 .hero::before{
@@ -15,6 +15,7 @@
 }
 
 .hero-container{
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +52,7 @@ h1{
 }
 
 p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
     padding: 10px 20px;
     overflow: hidden;
@@ -108,13 +109,14 @@ a{
 }
 .img-hero{
     overflow: hidden;
-    width: 500px;
-    margin-top: -45px;
+    height: 85vh;
+    /* margin-top: -45px; */
     mix-blend-mode:multiply;
     animation: 1s fade-in;
 }
 
 .img-hero img{
+
     background-blend-mode: multiply; 
     animation: fade-in 1s;
 }

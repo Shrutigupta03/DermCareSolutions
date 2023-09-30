@@ -10,9 +10,9 @@ header{
     justify-content: space-evenly;
     /* background: transparent; */
     background-color: white;
-    padding: 22px 14%;
+    padding: 30px;
     transition: all .50s ease;
-    height: 100px;
+    height: 17vh;
 
 }
 
@@ -39,8 +39,7 @@ button:hover{
 .logo{
     display: flex;
     align-items: center;
-    margin: auto;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 .logo i{
     color: var(--main-color);
@@ -59,7 +58,6 @@ li{
 .navbar{
     display: flex;
     margin: auto;
-    margin-left: 0;
     justify-content: center;
 }
 .navbar a{
@@ -140,9 +138,7 @@ li{
     }
     
     .navbar a{
-        padding: 5px 10px;
-        margin: 0 10px;
-
+        padding: 5px 13px;
     }
 }
 @media (max-width:960px) {
