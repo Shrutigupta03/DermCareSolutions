@@ -5,6 +5,16 @@
     height: 100vh;
     width: 100vw;
     background: linear-gradient(white , rgb(235, 235, 253) 100%);
+    animation: 1s fade-in ease;
+}
+@keyframes fade-in {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
 }
 
 .carousel-container{

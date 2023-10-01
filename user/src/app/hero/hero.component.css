@@ -10,7 +10,7 @@
     position: absolute;
     /* background: url(../../../assets/images/Home1Hero-main.jpeg) no-repeat center center/cover; */
     height: fit-content;
-    padding-top: 20vh;
+    /* padding-top: 20vh; */
     z-index: -1;
 }
 

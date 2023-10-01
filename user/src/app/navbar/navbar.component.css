@@ -10,7 +10,7 @@ header{
     justify-content: space-evenly;
     /* background: transparent; */
     background-color: white;
-    padding: 30px;
+    padding: 10px;
     transition: all .50s ease;
     height: 17vh;
 
@@ -64,8 +64,8 @@ li{
     color: var(--dark-color);
     font-size: 1.1rem;
     font-weight: 500;
-    padding: 2px 0px;
-    margin: 0;
+    padding: 0px 2.5vw;
+    width: max-content;
     transition: all 1s ease;
     text-decoration:none
 }
@@ -136,10 +136,10 @@ li{
         /* margin: 0; */
 
     }
-    
     .navbar a{
-        padding: 5px 13px;
+        padding: 0px 10px;
     }
+    
 }
 @media (max-width:960px) {
 
@@ -165,7 +165,6 @@ li{
     color: #000;
     flex-wrap: wrap;
     margin: 12px 0;
-    padding-top: 0 25px;
     transition: all .50s ease;
   }
   .navbar a:hover{
