@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
-import { PdfGeneratorServiceService } from '../pdf-generator-service.service';
+import { PdfGeneratorServiceService } from 'src/app/pdf-generator-service.service';
 import { HttpClient } from '@angular/common/http';
 import pdfMake from "pdfmake/build/pdfmake";  
 import pdfFonts from "pdfmake/build/vfs_fonts"; 
