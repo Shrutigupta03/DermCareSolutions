@@ -34,21 +34,19 @@ img{
 }
 h3{
     color: rgb(40, 40, 115);
-    margin-bottom: 35px;
 }
 .login{
     width: 100%;
 }
 
-.login__field,
-.form-group {
-	position: relative;
-    height: 50px;
+.login__field {
+	padding: 10px 0px;	
+	position: relative;	
 }
 
 .login__icon {
-	position: relative;
-	top: 30px;
+	position: absolute;
+	top: 20px;
 	color: rgb(40, 40, 115);
 }
 
@@ -65,17 +63,15 @@ h3{
 
 .login__input:active,
 .login__input:focus,
-.form-control:focus,
-.login__input:hover{
+.login__input:hover {
 	outline: none;
 	border-bottom-color: rgb(40, 40, 115);
 }
 
-
 .login__submit {
 	background: #fff;
 	font-size: 14px;
-	margin-top: 50px;
+	margin-top: 40px;
 	padding: 12px 20px;
 	border-radius: 26px;
 	border: 1px solid #D4D3E8;
@@ -108,31 +104,4 @@ a{
     margin-top: 10px;
     font-size: 13px;
     text-decoration: none;
-}
-
-
-.form-control{
-    border-radius: 0;
-}
-
-#userType{
-    border-radius: 10px;
-    width: max-content;
-    padding: 2px 20px;
-    display: inline;
-    margin-left: 10px;
-
-}
-i{
-    margin-left: 3px;
-}
-.choose{
-    display:flex;
-    justify-content: space-between;
-    height: fit-content;
-}
-label{
-    font-weight: 700;
-    font-size: 18px;
-    color: rgb(81, 81, 81);
 }

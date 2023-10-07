@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-log-in',
-  templateUrl: './log-in.component.html',
-  styleUrls: ['./log-in.component.css']
+  selector: 'app-forgot-pswrd',
+  templateUrl: './forgot-pswrd.component.html',
+  styleUrls: ['./forgot-pswrd.component.css']
 })
-export class LogInComponent {
+export class ForgotPswrdComponent {
   constructor(private router : Router){}
 
-  email: string = '';
+  email: string = ''
   password: string = '';
 
   onSubmit() {

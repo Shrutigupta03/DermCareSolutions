@@ -1,0 +1,70 @@
+<div class="main-container">
+    <button style="align-self: flex-start; margin-left: 30px;" (click)="Home()"> &larr; Go To Home</button>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="../../../assets/Doctor-images/Doctor_2.jpg" alt="Profile Picture" class="profile-pic">
+            <h3>{{ doctor.name }}</h3>
+        </div>
+
+        <div class="profile-details" *ngIf="!isEditMode">
+            <div class="detail">
+                <span class="label">Degree:</span>
+                <span>{{ doctor.degree }}</span>
+            </div>
+            <div class="detail">
+                <span class="label">Specialization:</span>
+                <span>{{ doctor.specialization }}</span>
+            </div>
+            <div class="detail">
+                <span class="label">Experience:</span>
+                <span>{{ doctor.experience }} years</span>
+            </div>
+            <div class="detail">
+                <span class="label">Patients Treated:</span>
+                <span>{{ doctor.patientsTreated }}</span>
+            </div>
+            <div class="detail">
+                <span class="label">Fee:</span>
+                <span>{{ doctor.fee }}</span>
+            </div>
+            <div class="detail">
+                <span class="label">Phone Number:</span>
+                <span>{{ doctor.phoneNumber }}</span>
+            </div>
+            <div class="detail">
+                <span class="label">Email:</span>
+                <span>{{ doctor.email }}</span>
+            </div>
+        </div>
+        <button (click)="toggleEditMode()" *ngIf="!isEditMode">Update Details</button>
+
+
+        <div class="edit-details" *ngIf="isEditMode">
+            <div class="detail">
+                <span class="label">Degree:</span>
+                <input [(ngModel)]="editedDoctor.degree" class="edit-input" />
+            </div>
+            <div class="detail">
+                <span class="label">Specialization:</span>
+                <input [(ngModel)]="editedDoctor.specialization" class="edit-input" />
+            </div>
+            <div class="detail">
+                <span class="label">Experience:</span>
+                <input [(ngModel)]="editedDoctor.experience" class="edit-input" />
+            </div>
+            <div class="detail">
+                <span class="label">Patients Treated:</span>
+                <input [(ngModel)]="editedDoctor.patientsTreated" class="edit-input" />
+            </div>
+            <div class="detail">
+                <span class="label">Fee:</span>
+                <input [(ngModel)]="editedDoctor.fee" class="edit-input" />
+            </div>
+            <div class="detail">
+                <span class="label">Contact No.:</span>
+                <input [(ngModel)]="editedDoctor.phoneNumber" class="edit-input" />
+            </div>
+            <button  (click)="updateDetails()" class="save-button">Save Changes</button>
+        </div>
+    </div>
+</div>

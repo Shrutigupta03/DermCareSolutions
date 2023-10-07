@@ -1,26 +1,27 @@
 <div class="main-container">
     <div class="container">
         <div class="image">
-            <img src="../../../assets/Auth-img/Login.svg" alt="Login">
+            <img src="../../../assets/Auth-img/forgot-pass.svg" alt="Login">
         </div>
         <div class="content">
-            <h3><strong>Login</strong></h3>
+            <h3><strong>Reset Password</strong></h3>
             <form class="login" (ngSubmit)="onSubmit()">
-				<div class="login__field">
+                
+                <div class="login__field">
 					<i class="login__icon fa fa-user"></i>
 					<input type="email" class="login__input" name="email" placeholder="Email" [(ngModel)]="email" required>
 				</div>
+
 				<div style="padding-bottom: 0;" class="login__field">
 					<i class="login__icon fa fa-lock"></i>
-					<input type="password" class="login__input" name="password" placeholder="Password" [(ngModel)]="password" required>
+					<input type="password" class="login__input" name="password" placeholder="Enter New Password" [(ngModel)]="password" required>
 				</div>
-                <a style="float: right; margin-top: 0;" href="/reset">Forgot Password?</a>
+
 				<button class="button login__submit">
-					<span class="button__text">Log In Now</span>
+					<span class="button__text">Reset Password</span>
 					<i class="button__icon fa fa-chevron-right"></i>
 				</button>				
 			</form>
-            <div class="register">Don't have an account? <a href="/signup">Register Now</a></div>
         </div>
     </div>
 </div>

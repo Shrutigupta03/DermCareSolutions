@@ -20,7 +20,7 @@ export class NavbarComponent {
   };
 
   newCrousel(): void {
-      this.router.navigate(['check']);
+      this.router.navigate(['login']);
   }
 
   tohome(){
@@ -38,5 +38,9 @@ export class NavbarComponent {
   meetDoctor(){
 		this.router.navigate(['connect-to-doctor']);
 	}
+
+  Profile(){
+    this.router.navigate(['doctor'])
+  }
 
 }

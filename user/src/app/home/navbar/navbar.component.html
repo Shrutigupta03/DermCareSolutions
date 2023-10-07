@@ -12,13 +12,11 @@
         <li (click)="meetDoctor()" [routerLinkActive]="'active'" ><a  class="nav-items">Consult a Doctor</a></li>
     </ul>
     <div class="main">
-        <a href="#" class="user hide"><i class="ri-user-fill hide"></i>Sign In</a>
-        <a href="#" class="hide">Register</a>
-
-        <!-- <a href="#" class="user"><i class="ri-user-fill"></i>Sign In</a>
-        <a href="#">Register</a> -->
+        <!-- <a class="nav-link" [routerLink]="['/doctor-profile']" *ngIf="authService.isLoggedIn() && authService.isDoctor()">Doctor Profile</a>
+        <a class="nav-link" [routerLink]="['/patient-profile']" *ngIf="authService.isLoggedIn() && authService.isPatient()">Patient Profile</a> -->
         <button class="btn" (click)="newCrousel()">Try Now &#8594; </button>
-        <div class="bx bx-menu"></div>
+        <i class="fa fa-user fa-2x" (click)="Profile()" aria-hidden="true"></i>
+        
     </div>
     <div class="components">
         <router-outlet></router-outlet>

@@ -12,9 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './home/about-us/about-us.component';
 import { FooterComponent } from './home/footer/footer.component';
 import { ImageComponent } from './home/image/image.component';
-import { CrouselComponent } from './upload/crousel/crousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { UploadImgComponent } from './upload/upload-img/upload-img.component';
 import {BenefitsComponent} from './home/benefits/benefits.component';
 import {HeaderComponent} from './home/header/header.component';
 import {HeroComponent} from './home/hero/hero.component';
@@ -23,7 +21,8 @@ import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
 import { BasicImportanceComponent } from './home/basic-importance/basic-importance.component';
 import { PdfGeneratorServiceService } from './pdf-generator-service.service';
 import { ConnectToDoctorComponent } from './connect-to-doctor/connect-to-doctor.component';
-
+import { AuthModule } from './auth/auth.module';
+import { UploadModule } from './upload/upload.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,10 +40,9 @@ import { ConnectToDoctorComponent } from './connect-to-doctor/connect-to-doctor.
     WhyToChoseComponent,
     BasicImportanceComponent,
     ConnectToDoctorComponent,
-    UploadImgComponent,
-    CrouselComponent
   ],
   imports: [
+    AuthModule, 
     BrowserModule,
     AppRoutingModule,
     RouterLink,
@@ -53,6 +51,7 @@ import { ConnectToDoctorComponent } from './connect-to-doctor/connect-to-doctor.
     ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
+    UploadModule
   ],
   providers: [PdfGeneratorServiceService],
   bootstrap: [AppComponent]

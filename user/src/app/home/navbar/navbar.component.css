@@ -126,6 +126,10 @@ li{
     z-index: 1001;
 }
 
+i:hover{
+    cursor: pointer;
+}
+
 
 /* Media Querry */
 @media (max-width:1280px) {
