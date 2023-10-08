@@ -6,7 +6,6 @@ import { LogInComponent } from './log-in/log-in.component';
 import { ForgotPswrdComponent } from './forgot-pswrd/forgot-pswrd.component';
 
 
-
 @NgModule({
   declarations: [
     SignUpComponent,

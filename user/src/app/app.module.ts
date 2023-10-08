@@ -51,7 +51,7 @@ import { UploadModule } from './upload/upload.module';
     ReactiveFormsModule,
     NgbModule,
     HttpClientModule,
-    UploadModule
+    UploadModule,
   ],
   providers: [PdfGeneratorServiceService],
   bootstrap: [AppComponent]

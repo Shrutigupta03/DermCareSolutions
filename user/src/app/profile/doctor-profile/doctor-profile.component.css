@@ -6,7 +6,7 @@
     width: 100vw;
     padding: 10px;
     max-height: fit-content;
-    background-image: linear-gradient(to bottom,white, rgb(187, 187, 231) 50%,  rgb(137, 139, 201) 80%);
+    background-image: linear-gradient(to bottom,white, rgb(227, 233, 250) 50%,  rgb(210, 216, 245) 80%);
 }
 .profile-container {
     width: 50vw;

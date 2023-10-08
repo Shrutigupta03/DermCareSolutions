@@ -16,6 +16,7 @@ import { ConnectToDoctorComponent } from './connect-to-doctor/connect-to-doctor.
 import { DoctorProfileComponent } from './profile/doctor-profile/doctor-profile.component';
 import { PatientProfileComponent } from './profile/patient-profile/patient-profile.component';
 import { ForgotPswrdComponent } from './auth/forgot-pswrd/forgot-pswrd.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   // { path:'', redirectTo:'home',pathMatch:'full'},
@@ -42,8 +43,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./upload/upload.module').then((m) => m.UploadModule),
   },
-  { path: 'check', component: CrouselComponent },
   { path: 'image', component: UploadImgComponent },
+  { path: 'check', component:CrouselComponent, canActivate: [AuthGuard]},
 
   {
     path: 'Profile',

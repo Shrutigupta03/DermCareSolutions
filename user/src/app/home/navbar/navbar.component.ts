@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
 import { IsActiveMatchOptions } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +9,12 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private router: Router,private activatedRoute: ActivatedRoute)
-  
-  {}
+  constructor(private router: Router,private activatedRoute: ActivatedRoute, private authService: AuthService){}
+
+  showProfile(): boolean {
+    return this.authService.isAuthenticated();
+  }
+
   public linkActiveOptions: IsActiveMatchOptions = {
     matrixParams: 'exact',
     queryParams: 'exact',
@@ -20,7 +23,7 @@ export class NavbarComponent {
   };
 
   newCrousel(): void {
-      this.router.navigate(['login']);
+      this.router.navigate(['/check']);
   }
 
   tohome(){

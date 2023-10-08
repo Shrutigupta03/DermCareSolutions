@@ -4,6 +4,10 @@ from flask_cors import CORS, cross_origin
 import tensorflow as tf
 import numpy as np
 import cv2
+import jwt
+import datetime
+from functools import wraps
+
 app = Flask(__name__)
 cors = CORS(app)
 
@@ -57,6 +61,76 @@ def upload_image():
         return jsonify(message=pred)
 
     return jsonify('File type not allowed'), 400
+
+
+app.config['SECRET_KEY'] = 'your-secret-key'  # Replace with a secure secret key
+
+# Replace this with your actual database or storage logic
+users = []
+
+# Function to generate a JWT token
+def generate_token(email):
+    payload = {
+        'email': email,
+        'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)  # Token expires in 1 hour (adjust as needed)
+    }
+    token = jwt.encode(payload, app.config['SECRET_KEY'], algorithm='HS256')
+    return token
+
+# Middleware function to verify JWT token
+def token_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        token = request.headers.get('Authorization')
+
+        if not token:
+            return jsonify({'error': 'Token is missing'}), 401
+
+        try:
+            data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+            current_user = [user for user in users if user['email'] == data['email']][0]
+        except jwt.ExpiredSignatureError:
+            return jsonify({'error': 'Token has expired'}), 401
+        except jwt.InvalidTokenError:
+            return jsonify({'error': 'Invalid token'}), 401
+
+        return f(current_user, *args, **kwargs)
+
+    return decorated
+
+@app.route('/signup', methods=['POST'])
+def signup():
+    data = request.json
+    user_type = data.get('userType')
+    email = data.get('email')
+    password = data.get('password')
+
+    if not user_type or not email or not password:
+        return jsonify({'error': 'All fields are required'}), 400
+
+    # Check if the email is already registered
+    for user in users:
+        if user['email'] == email:
+            return jsonify({'error': 'Email is already registered'}), 400
+
+    # Create a new user dictionary
+    new_user = {
+        'userType': user_type,
+        'email': email,
+        'password': password
+    }
+
+    users.append(new_user)
+
+    token = generate_token(email)
+
+    return jsonify({'message': 'Signup successful', 'token': token}), 201
+
+@app.route('/protected', methods=['GET'])
+@token_required
+def protected(current_user):
+    return jsonify({'message': 'This is a protected route', 'userType': current_user['userType'], 'email': current_user['email']})
+
 
 
 if __name__ == "__main__":

@@ -65,7 +65,7 @@ export class UploadImgComponent{
 	textQuestions: string[] = ['', ''];
 // router: any;
 
-  	constructor(private http: HttpClient, private pdfService: PdfGeneratorServiceService,private router: Router){}
+  	constructor(private http: HttpClient,private router: Router){}
 
 	onFileSelected(event: any) {
 		this.show = true;

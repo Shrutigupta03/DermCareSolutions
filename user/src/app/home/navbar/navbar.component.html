@@ -15,7 +15,7 @@
         <!-- <a class="nav-link" [routerLink]="['/doctor-profile']" *ngIf="authService.isLoggedIn() && authService.isDoctor()">Doctor Profile</a>
         <a class="nav-link" [routerLink]="['/patient-profile']" *ngIf="authService.isLoggedIn() && authService.isPatient()">Patient Profile</a> -->
         <button class="btn" (click)="newCrousel()">Try Now &#8594; </button>
-        <i class="fa fa-user fa-2x" (click)="Profile()" aria-hidden="true"></i>
+        <i class="fa fa-user fa-2x" *ngIf="showProfile()" (click)="Profile()" aria-hidden="true"></i>
         
     </div>
     <div class="components">
