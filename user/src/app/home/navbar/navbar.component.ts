@@ -43,7 +43,7 @@ export class NavbarComponent {
 	}
 
   Profile(){
-    this.router.navigate(['doctor'])
+    this.router.navigate(['profile'])
   }
 
 }

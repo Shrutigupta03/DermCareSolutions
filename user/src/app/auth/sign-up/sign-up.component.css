@@ -97,6 +97,9 @@ h3{
 	outline: none;
     box-shadow: 0px 2px 4px rgb(40, 40, 115);
 }
+input:focus{
+    border: none;
+}
 
 .button__icon {
 	font-size: 24px;

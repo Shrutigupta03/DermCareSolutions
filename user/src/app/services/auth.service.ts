@@ -6,10 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
   private token: string | null = null;
+  private user_type: string | null = null;
 
   constructor(private http: HttpClient) {}
 
-  // Assuming your backend provides a token upon successful signup
   setToken(token: string) {
     this.token = token;
   }
@@ -22,5 +22,12 @@ export class AuthService {
     return !!this.token; // Return true if the token exists, false otherwise
   }
 
-  // Implement logout method if needed
+  updateProfile(user_type:string){
+    this.user_type = user_type;
+  }
+
+  getUserType(): string | null {
+    return this.user_type;
+  }
+
 }

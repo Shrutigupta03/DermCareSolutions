@@ -4,11 +4,13 @@ import { DoctorProfileComponent } from './doctor-profile/doctor-profile.componen
 import { PatientProfileComponent } from './patient-profile/patient-profile.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     DoctorProfileComponent,
-    PatientProfileComponent
+    PatientProfileComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

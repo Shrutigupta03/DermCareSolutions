@@ -1,0 +1,95 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    padding: 10px;
+    max-height: fit-content;
+    background-image: linear-gradient(to bottom,white, rgb(227, 233, 250) 50%,  rgb(210, 216, 245) 80%);
+
+}
+
+.profile-container {
+    width: 50vw;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #ffffffa1;
+    box-shadow: 0px 0px 10px rgba(83, 83, 83, 0.793);
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  h2{
+    margin-bottom: 20px;
+    color: rgb(13, 13, 59);
+  }
+
+  .details-container{
+    width: 80%;
+  }
+
+  .detail{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .profile-container h2 {
+    text-align: center;
+  }
+  
+  label {
+    flex: 1; /* Distribute available space equally between label and input */
+    font-weight: bold;
+    margin-right: 10px; /* Add margin between label and input fields */
+    text-align: right; /* Right-align the label */
+  }
+  
+  input,
+  textarea, 
+  select{
+    padding: 2px 10px;
+    border: none;
+    background: none;
+    text-align: center;
+    border: none;
+    margin: 1px 20px;
+    transition: border-color 0.2s ease-in-out;
+    width: 50%;
+    height: 30px;
+
+  }
+
+  .underline{
+    border-bottom: 2px solid #6573b1;
+  }
+
+  input:focus,
+  textarea:focus, 
+  select:focus{
+    outline: none;
+  }
+  
+  button {
+    background-color: rgb(13, 13, 59);
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 35px;
+    margin-top: 15px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: 2px 2px 5px rgb(73, 73, 73);
+  }
+  button.update-button:hover {
+    background-color: #0056b3;
+  }
+  

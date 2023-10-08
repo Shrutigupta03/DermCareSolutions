@@ -10,7 +10,8 @@ import { ForgotPswrdComponent } from './forgot-pswrd/forgot-pswrd.component';
   declarations: [
     SignUpComponent,
     LogInComponent,
-    ForgotPswrdComponent
+    ForgotPswrdComponent,
+
   ],
   imports: [
     FormsModule,

@@ -15,6 +15,7 @@ import { LogInComponent } from './auth/log-in/log-in.component';
 import { ConnectToDoctorComponent } from './connect-to-doctor/connect-to-doctor.component';
 import { DoctorProfileComponent } from './profile/doctor-profile/doctor-profile.component';
 import { PatientProfileComponent } from './profile/patient-profile/patient-profile.component';
+import { ProfileComponent } from './profile/profile/profile.component';
 import { ForgotPswrdComponent } from './auth/forgot-pswrd/forgot-pswrd.component';
 import { AuthGuard } from './auth.guard';
 
@@ -51,8 +52,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./profile/profile.module').then((m) => m.ProfileModule),
   },
-  { path: 'doctor', component: DoctorProfileComponent},
-  { path: 'patient', component:PatientProfileComponent},
+  { path: 'profile', component:ProfileComponent},
 
   { path: '**', component: ErrorComponent },
 ];

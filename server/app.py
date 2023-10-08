@@ -113,7 +113,6 @@ def signup():
         if user['email'] == email:
             return jsonify({'error': 'Email is already registered'}), 400
 
-    # Create a new user dictionary
     new_user = {
         'userType': user_type,
         'email': email,
@@ -124,12 +123,7 @@ def signup():
 
     token = generate_token(email)
 
-    return jsonify({'message': 'Signup successful', 'token': token}), 201
-
-@app.route('/protected', methods=['GET'])
-@token_required
-def protected(current_user):
-    return jsonify({'message': 'This is a protected route', 'userType': current_user['userType'], 'email': current_user['email']})
+    return jsonify({'User-type': user_type,'token': token}), 201
 
 
 
