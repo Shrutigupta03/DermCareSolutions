@@ -101,11 +101,11 @@ def token_required(f):
 @app.route('/signup', methods=['POST'])
 def signup():
     data = request.json
-    user_type = data.get('userType')
+    username = data.get('username')
     email = data.get('email')
     password = data.get('password')
 
-    if not user_type or not email or not password:
+    if not username or not email or not password:
         return jsonify({'error': 'All fields are required'}), 400
 
     # Check if the email is already registered
@@ -114,7 +114,7 @@ def signup():
             return jsonify({'error': 'Email is already registered'}), 400
 
     new_user = {
-        'userType': user_type,
+        'username': username,
         'email': email,
         'password': password
     }
@@ -123,7 +123,7 @@ def signup():
 
     token = generate_token(email)
 
-    return jsonify({'User-type': user_type,'token': token}), 201
+    return jsonify({'username': username,'token': token, 'email':email}), 201
 
 
 

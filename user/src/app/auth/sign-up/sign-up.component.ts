@@ -11,24 +11,26 @@ import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 export class SignUpComponent {
   constructor(private http: HttpClient, private authService: AuthService, private router: Router) {}
 
-  selectedUserType: string = 'doctor';
+  Username: string = '';
   email: string = '';
   password: string = '';
 
   onSubmit() {
       const signupData = {
-        userType: this.selectedUserType,
+        username: this.Username,
         email: this.email,
         password: this.password
       };
       this.http.post('http://localhost:5000/signup', signupData).subscribe(
         (response: any) => {
           const token = response.token;
-          const userType = response['User-type']; // Make sure the server returns 'User-type' instead of 'userType'
+          const userName = response.username; 
+          const Email = response.email;
           this.authService.setToken(token);
-          this.authService.updateProfile(userType);
+          this.authService.setUserMail(Email);
+          this.authService.setUserName(userName);
           console.log('Signup successful:', response);
-          console.log(userType); // Make sure the case matches the response from the server
+          console.log(Email); 
           alert('Successfully Signed In !!');
           this.router.navigate(['home']);
         },

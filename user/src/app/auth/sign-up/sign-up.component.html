@@ -6,7 +6,7 @@
         <div class="content">
             <h3><strong>Sign Up</strong></h3>
             <form class="login" (ngSubmit)="onSubmit()">
-                <div class="form-group choose">
+                <!-- <div class="form-group choose">
                     <label for="userType">User type :</label>
                     <div style="display: inline;">
                         <select id="userType" [(ngModel)]="selectedUserType" name="userType" class="form-control" required>
@@ -15,18 +15,23 @@
                         </select>
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </div>
-                </div>
-
+                </div> -->
 
                 <div class="form-group login-field">
                     <i class="login__icon fa fa-user"></i>
+                    <input type="text" id="name" name="userName" class="login__input form-control" placeholder="Name"
+                        [(ngModel)]="Username" required>
+                </div>
+
+                <div class="form-group login-field">
+                    <i class="login__icon fa fa-envelope"></i>
                     <input type="email" id="email" name="email" class="login__input form-control" placeholder="Email"
                         [(ngModel)]="email" required>
                 </div>
 
                 <div class="form-group login-field">
                     <i class="login__icon fa fa-lock"></i>
-                    <input type="password" id="password" name="password" class="login__input form-control"
+                    <input type="password" id="password" name="password" class="login__input form-control" 
                         placeholder="Password" [(ngModel)]="password" required>
                 </div>
 

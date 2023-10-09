@@ -1,6 +1,54 @@
-<div *ngIf="role === 'patient'">
-    <app-patient-profile></app-patient-profile>
-</div>
-<div *ngIf="role === 'doctor'">
-    <app-doctor-profile></app-doctor-profile>
+<div class="main-container">
+    <button style="align-self: flex-start; margin-left: 30px;" (click)="Home()"> &larr; Go To Home</button>
+
+    <div class="profile-container">
+        <h2>Profile</h2>
+        <div class="details-container">
+            <div class="detail">
+                <label for="name">Name:</label>
+                <input type="text" id="name" [ngClass]="{'underline': isEditing}" [(ngModel)]="patient.name" [disabled]="!isEditing" />
+            </div>
+
+            <div class="detail">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" [ngClass]="{'underline': isEditing}" [(ngModel)]="patient.phone" [disabled]="!isEditing" />
+            </div>
+
+            <div class="detail">
+                <label for="email">Email:</label>
+                <input type="email" id="email" [ngClass]="{'underline': isEditing}" [(ngModel)]="patient.email" />
+            </div>
+
+            <div class="detail">
+                <label for="age">Age:</label>
+                <input type="text" id="age" [ngClass]="{'underline': isEditing}" [(ngModel)]="patient.age" [disabled]="!isEditing">
+            </div>
+
+            <div class="detail">
+                <label for="gender">Gender:</label>
+                <select id="gender" class="gender-select" [ngClass]="{'underline': isEditing}" [(ngModel)]="patient.gender" [disabled]="!isEditing">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="detail">
+                <label for="blood-group">Blood Group:</label>
+                <select id="blood-group" class="gender-select" [ngClass]="{'underline': isEditing}" [(ngModel)]="patient.bloodGroup" [disabled]="!isEditing">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+           
+        </div>
+        <button class="update-button" *ngIf="!isEditing" (click)="toggleEdit()">Update Details</button>
+        <button class="save-details" *ngIf="isEditing" (click)="saveProfile()">Save Details</button>
+    </div>
 </div>
