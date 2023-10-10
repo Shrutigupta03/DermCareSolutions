@@ -23,7 +23,7 @@ h3{
     box-shadow: 4px 4px 6px rgb(220, 220, 220);
     margin: 0 2vw;
     background-color: rgb(233, 233, 252);
-    height: 350px;
+    height: 290px;
     max-height: fit-content;
     animation: pulse 5s infinite;
 
@@ -35,7 +35,7 @@ h3{
       transform: scale(0.9);
     }
     50% {
-      transform: scale(1.01);
+      transform: scale(1.00);
     }
   }
   
@@ -51,17 +51,19 @@ h6{
 .img-container{
     display: flex;
     justify-content: center;
-    height: 105px;
-    width: 105px;
-    border: 1px solid rgb(13, 13, 59);
+    height: 115px;
+    width: 115px;
+    /* box-shadow: 0px 0px 4px rgb(220, 220, 220); */
+    border: 8px solid rgb(233, 233, 252);
     background-color: rgb(13, 13, 59);
-    margin: 20px 10px 15px 10px;
+    margin: -47px 10px 10px 10px;
     padding: 15px;
     border-radius: 50%;
 }
 .img-container img{
-    width: 75px;
+    width: 69px;
     padding: 6px;
+    height: 69px;
 }
 
 .fa-laptop,

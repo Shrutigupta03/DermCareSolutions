@@ -1,13 +1,15 @@
 .risk-container {
     display: block;
-    padding: 50px 50px 40px 50px;
+    padding: 95px 62px 95px 62px;
     /* padding: 16px; */
     background-color: rgb(255, 255, 255);
     z-index: -200;
     height: fit-content;
     width: 98.6vw;
     animation: fade-in 3s ease;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1400' height='600' preserveAspectRatio='none' viewBox='0 0 1400 600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1272%26quot%3b)' fill='none'%3e%3cpath d='M53.6 332.6 a132.48 132.48 0 1 0 264.96 0 a132.48 132.48 0 1 0 -264.96 0z' fill='rgba(223%2c 223%2c 252%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M-88.71 173.98 a117.88 117.88 0 1 0 235.76 0 a117.88 117.88 0 1 0 -235.76 0z' fill='rgba(223%2c 223%2c 252%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M564.24 584.23 a172.08 172.08 0 1 0 344.16 0 a172.08 172.08 0 1 0 -344.16 0z' fill='rgba(223%2c 223%2c 252%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M992.73 465.44 a178.56 178.56 0 1 0 357.12 0 a178.56 178.56 0 1 0 -357.12 0z' fill='rgba(223%2c 223%2c 252%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M409.22 371.73 a151.32 151.32 0 1 0 302.64 0 a151.32 151.32 0 1 0 -302.64 0z' fill='rgba(223%2c 223%2c 252%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1272'%3e%3crect width='1400' height='600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    background-image: url('../../../assets/images/basic-benefit-bg.png');
+    background-size: 100vw 120vh;
+    background-repeat: no-repeat;
 }
 
 
