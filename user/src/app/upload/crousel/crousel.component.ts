@@ -15,15 +15,15 @@ interface crouselImage {
 export class CrouselComponent implements OnInit {
   @Input() images: crouselImage[] = [
     {
-      imageSrc: 'assets/images/slider-1.svg',
+      imageSrc: 'assets/images/distance-slider.png',
       imageAlt: 'first',
     },
     {
-      imageSrc: "assets/images/slider-2.svg",
+      imageSrc: "assets/images/focus-slider.png",
       imageAlt: 'second',
     },
     {
-      imageSrc: 'assets/images/slider-3.svg',
+      imageSrc: 'assets/images/hand-slider.png',
       imageAlt: 'third',
     },
   ]

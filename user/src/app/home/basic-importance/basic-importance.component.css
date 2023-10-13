@@ -1,6 +1,6 @@
 .risk-container {
     display: block;
-    padding: 95px 62px 95px 62px;
+    padding: 65px 62px 95px 62px;
     /* padding: 16px; */
     background-color: rgb(255, 255, 255);
     z-index: -200;
@@ -31,7 +31,7 @@ p {
 .box {
     /* position: relative; */
     top: 10px;
-    margin-top: 15px;
+    margin-top: 50px;
     flex: 1;
     height: fit-content;
 

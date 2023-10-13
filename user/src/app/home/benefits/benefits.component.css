@@ -1,12 +1,13 @@
 .main-container{
     padding: 30px;
+    padding-top: 65px;
 }
 h3{
     margin: 0 32px;
     font-weight: bold;
 }
 .para{
-    margin: 0px 32px 10px 32px;
+    margin: 0px 32px 35px 32px;
 }
 .info-box-container{
     display: flex;

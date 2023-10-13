@@ -1,7 +1,7 @@
 div.container{
     display: flex;
     flex-direction: row;
-    margin: 15vh auto 30px auto;
+    margin: 5vh auto 30px auto;
     height: 60vh;
     border: 1px solid rgb(255, 255, 255);
     background-color: rgb(229, 229, 253);

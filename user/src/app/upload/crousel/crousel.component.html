@@ -1,7 +1,6 @@
 <div class="carousel">
 <div *ngIf="images && images.length >0" class="carousel-container">
-    <h3>Before you start - learn
-        How to make a suitable photo</h3>
+    <h3>Begin with proper photo-taking skills first.</h3>
 
     <img *ngFor="let image of images; let i = index"
         [src]="image.imageSrc" [alt]="image.imageAlt"
