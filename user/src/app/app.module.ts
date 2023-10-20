@@ -17,7 +17,7 @@ import {BenefitsComponent} from './home/benefits/benefits.component';
 import {HeaderComponent} from './home/header/header.component';
 import {HeroComponent} from './home/hero/hero.component';
 import { GetStartedComponent } from './home/get-started/get-started.component';
-import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
+import { WhyToChoseComponent } from './home/why-to-chose/why-to-chose.component';
 import { BasicImportanceComponent } from './home/basic-importance/basic-importance.component';
 import { PdfGeneratorServiceService } from './pdf-generator-service.service';
 import { ConnectToDoctorComponent } from './connect-to-doctor/connect-to-doctor.component';

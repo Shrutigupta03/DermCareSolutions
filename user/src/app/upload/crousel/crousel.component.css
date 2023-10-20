@@ -4,7 +4,7 @@
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(white , rgb(235, 235, 253) 100%);
+    background-image: linear-gradient(to bottom,white, rgb(224, 224, 255) ,  rgb(219, 219, 255) );
     animation: 1s fade-in ease;
 }
 @keyframes fade-in {

@@ -1,6 +1,6 @@
 .risk-container {
     display: block;
-    padding: 65px 62px 95px 62px;
+    padding-top: 18vh;
     /* padding: 16px; */
     background-color: rgb(255, 255, 255);
     z-index: -200;
@@ -13,19 +13,20 @@
 }
 
 
-h3 {
+h2 {
     font-weight: bold;
-    /* text-align: center; */
+    text-align: center;
 }
 
 p {
-    /* text-align: center; */
-    font-size: 13px;
+    text-align: center;
+    font-size: 15px;
+    margin: 0;
 }
 
 .benefits-of-using {
     display: flex;
-    width: 50vw;
+    /* width: 50vw; */
 }
 
 .box {
@@ -61,7 +62,7 @@ p {
 .item {
     display: flex;
     flex-direction: row;
-    padding: 6px;
+    padding: 14px;
     margin: 4px 0;
     align-items: center;
     border: 2px solid rgb(209, 209, 253);
@@ -71,10 +72,11 @@ p {
     width: 28vw;
     box-shadow: inset 4px 4px 8px rgb(255, 255, 255);
     animation: fade-in 1s ease;
+    z-index: 2;
 }
 @keyframes fade-in {
     from{
-        opacity: 0;
+        opacity: 0.3;
     }
     to{
         opacity: 1;
@@ -82,9 +84,6 @@ p {
     
 }
 
-p {
-    margin: 0;
-}
 
 .icon {
     padding: 2px 4px;
@@ -96,23 +95,29 @@ p {
 }
 
 .desc {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .end {
     align-self: flex-start;
-    margin-left: 22vw;
+    margin-left: 30.5vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .start {
     align-self: flex-end;
-    margin-right: 22vw;
+    margin-right: 32vw;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 .item:hover {
     background-color: white;
     box-shadow: 0px 0px 5px rgb(15, 15, 39);
-    animation: pulseOut 2s ease;
+    animation: pulseOut 1.5s ease;
 }
 
 @keyframes pulseOut {
@@ -121,10 +126,47 @@ p {
     }
 
     50% {
-        transform: scale(1.09);
+        transform: scale(1.1);
     }
 
     100% {
-        transform: scale(1.1);
+        transform: scale(1);
     }
 }
+
+.circle{
+    height: 50px; 
+    width: 50px; 
+    border-radius: 50%; 
+    box-shadow: 0px 0px 5px gray; 
+    background-color: white;
+
+}
+.circular{
+    padding: 8px;
+    border: 8px solid rgb(209, 209, 253);
+    transform: rotate(45deg);
+    border-radius: 50%;
+    transition: transform 1s ease;
+}
+
+hr{
+    width: 40px;
+    background-color: rgb(55, 55, 255);
+    color: transparent;
+    height: 6px;
+}
+.end .circular{
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+.start .circular{
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+/* .item:hover ~ .circular{
+    border: 8px solid rgb(209, 209, 253);
+    transform: rotate(-45deg);
+    transition: transform 1s ease;
+} */
+

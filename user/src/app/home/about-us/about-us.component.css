@@ -1,5 +1,10 @@
+div.main-container{
+        padding: 15px;
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
+}
 div.about-ai-dermo{
-    margin: 65px 30px 100px 30px;
+    margin: 65px 30px 30px 30px;
     padding: 40px;
     border-radius: 15px;
     /* background-image: url("../../assets/images/layer-bg.svg"); */
@@ -13,12 +18,13 @@ div.about-ai-dermo{
     color: white;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 8px 8px 10px rgb(13, 13, 59);
+    box-shadow: 8px 8px 8px rgb(101, 101, 144);
     transition: box-shadow 1s;
 }
 div.about-ai-dermo:hover{
-    box-shadow: 0px 0px 20px rgb(13, 13, 59);
+    box-shadow: 0px 0px 15px rgb(101, 101, 144);
     transition: box-shadow 1s;
+    /* background-color:  rgb(143, 143, 236); */
 }
 h2{
     /* color: rgb(22, 22, 92); */
@@ -36,5 +42,5 @@ img{
     /* font-weight: bold; */
 }
 p{
-    font-size: 14px;
+    font-size: 15px;
 }

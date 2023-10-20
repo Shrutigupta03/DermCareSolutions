@@ -1,9 +1,10 @@
 /* .main-container{
     padding: 40px 60px;
 } */
-h3{
+h2{
     padding: 65px 62px 0px 62px;
     font-weight: bold;
+    text-align: center;
     color: rgb(13, 13, 59);
 }
 /* .items-container{

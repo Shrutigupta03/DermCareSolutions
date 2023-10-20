@@ -6,10 +6,13 @@
     </div>
     <ul class="navbar">
         <li (click)="tohome()" [routerLinkActive]="'active'" ><a [routerLink]="" class="nav-items">Home</a></li>
-        <li (click)="toabout()" [routerLinkActive]="'active'" ><a class="nav-items">About</a></li> 
-        <li (click)="toBenefits()" [routerLinkActive]="'active'" ><a class="nav-items">Services</a></li> 
+        <!-- <li (click)="toabout()" [routerLinkActive]="'active'" ><a class="nav-items">About</a></li>  -->
         <li (click)="toWhy()" [routerLinkActive]="'active'" ><a  class="nav-items">Why us?</a></li>
+        <li (click)="toBenefits()" [routerLinkActive]="'active'" ><a class="nav-items">Services</a></li> 
+
         <li (click)="meetDoctor()" [routerLinkActive]="'active'" ><a  class="nav-items">Consult a Doctor</a></li>
+        <li (click)="toreview()" [routerLinkActive]="'active'" ><a class="nav-items">Reviews</a></li> 
+
     </ul>
     <div class="main">
         <!-- <a class="nav-link" [routerLink]="['/doctor-profile']" *ngIf="authService.isLoggedIn() && authService.isDoctor()">Doctor Profile</a>

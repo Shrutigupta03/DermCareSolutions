@@ -9,7 +9,7 @@ import { HeroComponent } from './home/hero/hero.component';
 import { ImageComponent } from './home/image/image.component';
 import { ErrorComponent } from './error/error.component';
 import { BenefitsComponent } from './home/benefits/benefits.component';
-import { WhyToChoseComponent } from './why-to-chose/why-to-chose.component';
+import { WhyToChoseComponent } from './home/why-to-chose/why-to-chose.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { LogInComponent } from './auth/log-in/log-in.component';
 import { ConnectToDoctorComponent } from './connect-to-doctor/connect-to-doctor.component';
