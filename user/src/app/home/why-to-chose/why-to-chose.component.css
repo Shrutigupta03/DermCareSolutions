@@ -1,6 +1,7 @@
 .main-container{
     overflow: hidden;
     margin-bottom: 60px;
+    padding-top: 18vh;
 }
 .why-slider-container{
     height: fit-content;
@@ -11,7 +12,7 @@
 }
 h2{
     text-align: center;
-    padding: 65px 62px 0px 62px;
+    padding: 0 62px 0px 62px;
     font-weight: bold;
     color: rgb(13, 13, 59);
     margin-bottom: 50px;
