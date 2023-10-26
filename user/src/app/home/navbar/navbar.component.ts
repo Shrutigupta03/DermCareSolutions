@@ -29,9 +29,9 @@ export class NavbarComponent {
   tohome(){
     document.getElementById("home").scrollIntoView({behavior:'smooth'});
   }
-  // toabout(){
-  //   document.getElementById("about").scrollIntoView({behavior:'smooth'});
-  // }
+  toabout(){
+    document.getElementById("about").scrollIntoView({behavior:'smooth'});
+  }
   toWhy(){
     document.getElementById("why").scrollIntoView({behavior:'smooth'});
   }
@@ -41,9 +41,9 @@ export class NavbarComponent {
   meetDoctor(){
 		this.router.navigate(['connect-to-doctor']);
 	}
-  toreview(){
-    document.getElementById("reviews").scrollIntoView({behavior:'smooth'});
-  }
+  // toreview(){
+  //   document.getElementById("reviews").scrollIntoView({behavior:'smooth'});
+  // }
 
   Profile(){
     this.router.navigate(['profile'])

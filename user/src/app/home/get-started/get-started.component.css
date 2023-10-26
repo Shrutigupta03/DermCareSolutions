@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('../../../assets/images/background-getstart.jpg');
+    /* background-image: url('../../../assets/images/background-getstart.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,12 +13,11 @@ h2{
     font-weight: bold;
     text-align: center;
     color: rgb(13, 13, 59);
-    margin-bottom: 40px;
 }
 
 img{
     /* margin: 0px 51px 45px 51px; */
-    width: 50vw;
+    width: 90vw;
     margin: auto;
     padding-bottom: 30px;
 }
