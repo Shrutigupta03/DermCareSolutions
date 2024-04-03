@@ -11,6 +11,8 @@ from functools import wraps
 app = Flask(__name__)
 cors = CORS(app)
 
+from pyngrok import ngrok
+
 UPLOAD_FOLDER = "images" 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
@@ -128,4 +130,7 @@ def signup():
 
 
 if __name__ == "__main__":
+    public_url = ngrok.connect(5000).public_url
+    print(f"ngrok tunnel \'{public_url}\' -> \'http://127.0.0.1:{5000}\'")
+
     app.run(port=5000, host="0.0.0.0", debug=True)
