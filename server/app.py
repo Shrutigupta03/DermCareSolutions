@@ -4,14 +4,8 @@ from flask_cors import CORS, cross_origin
 import tensorflow as tf
 import numpy as np
 import cv2
-import jwt
-import datetime
-from functools import wraps
-
 app = Flask(__name__)
 cors = CORS(app)
-
-from pyngrok import ngrok
 
 UPLOAD_FOLDER = "images" 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
@@ -65,72 +59,5 @@ def upload_image():
     return jsonify('File type not allowed'), 400
 
 
-app.config['SECRET_KEY'] = 'your-secret-key'  # Replace with a secure secret key
-
-# Replace this with your actual database or storage logic
-users = []
-
-# Function to generate a JWT token
-def generate_token(email):
-    payload = {
-        'email': email,
-        'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)  # Token expires in 1 hour (adjust as needed)
-    }
-    token = jwt.encode(payload, app.config['SECRET_KEY'], algorithm='HS256')
-    return token
-
-# Middleware function to verify JWT token
-def token_required(f):
-    @wraps(f)
-    def decorated(*args, **kwargs):
-        token = request.headers.get('Authorization')
-
-        if not token:
-            return jsonify({'error': 'Token is missing'}), 401
-
-        try:
-            data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
-            current_user = [user for user in users if user['email'] == data['email']][0]
-        except jwt.ExpiredSignatureError:
-            return jsonify({'error': 'Token has expired'}), 401
-        except jwt.InvalidTokenError:
-            return jsonify({'error': 'Invalid token'}), 401
-
-        return f(current_user, *args, **kwargs)
-
-    return decorated
-
-@app.route('/signup', methods=['POST'])
-def signup():
-    data = request.json
-    username = data.get('username')
-    email = data.get('email')
-    password = data.get('password')
-
-    if not username or not email or not password:
-        return jsonify({'error': 'All fields are required'}), 400
-
-    # Check if the email is already registered
-    for user in users:
-        if user['email'] == email:
-            return jsonify({'error': 'Email is already registered'}), 400
-
-    new_user = {
-        'username': username,
-        'email': email,
-        'password': password
-    }
-
-    users.append(new_user)
-
-    token = generate_token(email)
-
-    return jsonify({'username': username,'token': token, 'email':email}), 201
-
-
-
 if __name__ == "__main__":
-    public_url = ngrok.connect(5000).public_url
-    print(f"ngrok tunnel \'{public_url}\' -> \'http://127.0.0.1:{5000}\'")
-
     app.run(port=5000, host="0.0.0.0", debug=True)
